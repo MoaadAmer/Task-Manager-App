@@ -20,7 +20,15 @@ app.MapGet("/todos/{id}", Results<Ok<Todo>, NotFound> (int id) =>
     TypedResults.Ok(targetTodo);
 });
 
-app.MapGet("/todos", ()=> todos);
+app.MapGet("/todos", () => todos);
+
+app.MapDelete("/todos/{id}", (int id) =>
+{
+
+    todos.RemoveAll(t => t.Id == id);
+    return TypedResults.NoContent();
+}
+);
 
 app.Run();
 

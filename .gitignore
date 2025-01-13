@@ -42,3 +42,7 @@ Introduction to APIs/obj/Debug/net8.0/Introduction to APIs.csproj.BuildWithSkipA
 Introduction to APIs/obj/Debug/net8.0/Introduction to APIs.csproj.CoreCompileInputs.cache
 Introduction to APIs/obj/Debug/net8.0/Introduction to APIs.csproj.FileListAbsolute.txt
 .vs/Introduction to APIs/v17/DocumentLayout.json
+/.vs/Introduction to APIs/config/applicationhost.config
+/.vs/Introduction to APIs/FileContentIndex/bd8b396a-ddb7-463f-890a-bc18537d0f5d.vsidx
+/Introduction to APIs/obj/Debug/net8.0
+/Introduction to APIs/Introduction to APIs.csproj.user

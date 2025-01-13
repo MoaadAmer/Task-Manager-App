@@ -4,10 +4,23 @@ POST http://localhost:5088/todos
 Content-Type: application/json
 
 {
+    "id":1,
+    "name":"test1",
+    "dueDate":"2025-01-13",
+    "isCompleted" :false
+}
+###
+POST http://localhost:5088/todos
+Content-Type: application/json
+
+{
     "id":2,
     "name":"test2",
     "dueDate":"2025-01-13",
     "isCompleted" :false
 }
+
 ###
 GET http://localhost:5088/todos/10
+###
+DELETE http://localhost:5088/todos/2
