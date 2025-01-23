@@ -1,7 +1,10 @@
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Rewrite;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddSingleton<ITaskService>(new InMemoryTaskService());
 
 var app = builder.Build();
 
@@ -21,9 +24,9 @@ app.Use(async (context, next) =>
 
 var todos = new List<Todo>();
 
-app.MapPost("/todos", (Todo task) =>
+app.MapPost("/todos", (Todo task, ITaskService taskService) =>
 {
-    todos.Add(task);
+    taskService.AddTodo(task);
     return TypedResults.Created("/todos/{id}", task);
 })
 .AddEndpointFilter(async (context, next) =>
@@ -46,20 +49,20 @@ app.MapPost("/todos", (Todo task) =>
         return await next(context);
     });
 
-app.MapGet("/todos/{id}", Results<Ok<Todo>, NotFound> (int id) =>
+app.MapGet("/todos/{id}", Results<Ok<Todo>, NotFound> (int id, ITaskService taskService) =>
 {
-    var targetTodo = todos.SingleOrDefault(t => t.Id == id);
+    var targetTodo = taskService.GetTodoById(id);
     return targetTodo is null ?
     TypedResults.NotFound() :
     TypedResults.Ok(targetTodo);
 });
 
-app.MapGet("/todos", () => todos);
+app.MapGet("/todos", (ITaskService taskService) => taskService.GetAllTodos());
 
-app.MapDelete("/todos/{id}", (int id) =>
+app.MapDelete("/todos/{id}", (int id, ITaskService taskService) =>
 {
 
-    todos.RemoveAll(t => t.Id == id);
+    taskService.DeleteTodoById(id);
     return TypedResults.NoContent();
 }
 );
@@ -71,3 +74,38 @@ app.Run();
 
 
 public record Todo(int Id, string Name, DateTime DueDate, bool isCompleted);
+
+
+public interface ITaskService
+{
+    void AddTodo(Todo task);
+    void DeleteTodoById(int id);
+
+    Todo? GetTodoById(int id);
+    List<Todo> GetAllTodos();
+}
+
+
+public class InMemoryTaskService : ITaskService
+{
+    private List<Todo> _todos = [];
+    public void AddTodo(Todo task)
+    {
+        _todos.Add(task);
+    }
+
+    public void DeleteTodoById(int id)
+    {
+        _todos.RemoveAll(t => t.Id == id);
+    }
+
+    public List<Todo> GetAllTodos()
+    {
+        return _todos;
+    }
+
+    public Todo? GetTodoById(int id)
+    {
+        return _todos.SingleOrDefault(t => t.Id == id);
+    }
+}
