@@ -64,3 +64,4 @@ Introduction to APIs/obj/Debug/net8.0/Introduction to APIs.csproj.FileListAbsolu
 /Introduction to APIs/bin/Debug/net8.0
 /.vs
 /Controller-based APIs/Controller-based APIs.csproj.user
+/Controller-based APIs/Models/TodoItemDTO.cs
