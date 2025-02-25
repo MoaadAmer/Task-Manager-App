@@ -1,8 +1,12 @@
-﻿namespace Controller_based_APIs.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Controller_based_APIs.Models
 {
     public class TodoItemForCreationDTO
     {
-        public string? Name { get; set; }
+        [Required]
+        [MaxLength(40)]
+        public string Name { get; set; } = string.Empty;
         public bool IsComplete { get; set; }
     }
 }
