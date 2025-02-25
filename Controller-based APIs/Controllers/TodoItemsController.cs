@@ -10,10 +10,16 @@ namespace Controller_based_APIs.Controllers
     {
 
         [HttpPost]
-        public ActionResult<TodoItemDTO> AddItem(TodoItemDTO item)
+        public ActionResult<TodoItemDTO> AddItem(TodoItemForCreationDTO item)
         {
-            TodoItemsService.Add(item);
-            return CreatedAtAction(nameof(GetItem), new { id = item.Id }, item);
+            var todoItem = new TodoItemDTO
+            {
+                Name = item.Name,
+                IsComplete = item.IsComplete
+            };
+
+            TodoItemsService.Add(todoItem);
+            return CreatedAtAction(nameof(GetItem), new { id = todoItem.Id }, item);
         }
 
         [HttpGet]
