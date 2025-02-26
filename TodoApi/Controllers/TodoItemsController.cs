@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Controller_based_APIs.Models;
 using Controller_based_APIs.Services;
+using Microsoft.AspNetCore.JsonPatch;
 
 namespace Controller_based_APIs.Controllers
 {
@@ -56,6 +57,50 @@ namespace Controller_based_APIs.Controllers
             TodoItemsService.Update(todoItem);
 
             return NoContent();
+        }
+
+        [HttpPatch("{id}")]
+        public IActionResult PartiallyUpdateItem(int id, JsonPatchDocument<TodoItemForUpdateDTO> patchDoc)
+        {
+            if (patchDoc != null)
+            {
+                if (!TodoItemsService.Exists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+
+                    TodoItemForUpdateDTO todoItemToPatch = new();
+
+                    patchDoc.ApplyTo(todoItemToPatch, ModelState);
+
+                    if (!ModelState.IsValid)
+                    {
+                        return BadRequest(ModelState);
+                    }
+                    if (!TryValidateModel(todoItemToPatch))
+                    {
+                        return BadRequest(ModelState);
+                    }
+                    var todoItem = new TodoItemDTO
+                    {
+                        Id = id,
+                        Name = todoItemToPatch.Name,
+                        IsComplete = todoItemToPatch.IsComplete
+                    };
+
+                    TodoItemsService.Update(todoItem);
+
+                    return NoContent();
+
+                }
+
+            }
+            else
+            {
+                return BadRequest(ModelState);
+            }
         }
 
         [HttpDelete("{id}")]
