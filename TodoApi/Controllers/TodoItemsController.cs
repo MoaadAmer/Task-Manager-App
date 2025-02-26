@@ -23,21 +23,20 @@ namespace Controller_based_APIs.Controllers
         }
 
         [HttpGet]
-        public ActionResult<List<TodoItemDTO>> GetItems()
+        public ActionResult<IEnumerable<TodoItemDTO>> GetItems()
         {
-            return TodoItemsService.GetAll();
+
+            return Ok(TodoItemsService.GetAll());
         }
 
         [HttpGet("{id}")]
         public ActionResult<TodoItemDTO> GetItem(int id)
         {
             var todoItem = TodoItemsService.Get(id);
-
-            if (todoItem == null)
-            {
-                return NotFound();
-            }
-            return Ok(todoItem);
+           
+            return todoItem == null ?
+                NotFound() :
+                Ok(todoItem);
         }
 
         [HttpPut("{id}")]
