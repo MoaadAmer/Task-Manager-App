@@ -36,13 +36,18 @@ namespace Controller_based_APIs.Services
             }
         }
 
-        public static void Delete(TodoItemDTO item)
+        public static void Delete(int id)
         {
-            int index = TodoItems.FindIndex(i => i.Id == item.Id);
+            int index = TodoItems.FindIndex(i => i.Id == id);
             if (index != -1)
             {
                 TodoItems.RemoveAt(index);
             }
+        }
+
+        public static bool Exists(int id)
+        {
+            return TodoItems.Any(item => item.Id == id);
         }
     }
 }

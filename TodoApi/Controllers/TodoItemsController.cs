@@ -19,13 +19,12 @@ namespace Controller_based_APIs.Controllers
             };
 
             TodoItemsService.Add(todoItem);
-            return CreatedAtAction(nameof(GetItem), new { id = todoItem.Id }, item);
+            return CreatedAtAction(nameof(GetItem), new { id = todoItem.Id }, todoItem);
         }
 
         [HttpGet]
         public ActionResult<IEnumerable<TodoItemDTO>> GetItems()
         {
-
             return Ok(TodoItemsService.GetAll());
         }
 
@@ -33,26 +32,28 @@ namespace Controller_based_APIs.Controllers
         public ActionResult<TodoItemDTO> GetItem(int id)
         {
             var todoItem = TodoItemsService.Get(id);
-           
+
             return todoItem == null ?
                 NotFound() :
                 Ok(todoItem);
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateItem(int id, TodoItemDTO item)
+        public IActionResult UpdateItem(int id, TodoItemForUpdateDTO item)
         {
-            if (id != item.Id)
-            {
-                return BadRequest();
-            }
-
-            var todoItem = TodoItemsService.Get(id);
-            if (todoItem == null)
+            if (!TodoItemsService.Exists(id))
             {
                 return NotFound();
             }
-            TodoItemsService.Update(item);
+
+            var todoItem = new TodoItemDTO
+            {
+                Id = id,
+                Name = item.Name,
+                IsComplete = item.IsComplete
+            };
+
+            TodoItemsService.Update(todoItem);
 
             return NoContent();
         }
@@ -60,13 +61,11 @@ namespace Controller_based_APIs.Controllers
         [HttpDelete("{id}")]
         public IActionResult DeleteItem(int id)
         {
-            var item = TodoItemsService.Get(id);
-            if (item == null)
+            if (!TodoItemsService.Exists(id))
             {
                 return NotFound();
             }
-
-            TodoItemsService.Delete(item);
+            TodoItemsService.Delete(id);
 
             return NoContent();
         }
