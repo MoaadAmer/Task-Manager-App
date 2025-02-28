@@ -2,8 +2,20 @@
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
+using Serilog;
+
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Debug()
+    .WriteTo.Console()
+    .WriteTo.File("logs/todoinfo.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+
+
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddSerilog();
+
 
 // Add services to the container.
 
