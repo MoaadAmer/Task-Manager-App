@@ -14,11 +14,19 @@ builder.Services.AddControllers(options =>
 
 }).AddXmlDataContractSerializerFormatters();
 
+
+builder.Services.AddProblemDetails();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler();
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
