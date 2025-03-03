@@ -5,6 +5,7 @@ using Microsoft.Extensions.Options;
 using Serilog;
 using Controller_based_APIs.Data;
 using Controller_based_APIs.Models;
+using Controller_based_APIs.Services;
 
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
@@ -17,9 +18,7 @@ Log.Logger = new LoggerConfiguration()
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSerilog();
-builder.Services.AddSingleton<IRepository<TodoItemDTO>, InMemoryTodoRepo>();
 
-// Add services to the container.
 
 builder.Services.AddControllers(options =>
 {
@@ -35,6 +34,15 @@ builder.Services.AddProblemDetails();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+
+builder.Services.AddSingleton<IRepository<TodoItemDTO>, InMemoryTodoRepo>();
+
+#if DEBUG
+builder.Services.AddTransient<IMailService, LocalMailService>();
+#else
+builder.Services.AddTransient<IMailService, CloudMailService>();
+#endif
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())

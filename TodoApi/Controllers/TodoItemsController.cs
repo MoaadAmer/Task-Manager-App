@@ -2,6 +2,7 @@
 using Controller_based_APIs.Models;
 using Microsoft.AspNetCore.JsonPatch;
 using Controller_based_APIs.Data;
+using Controller_based_APIs.Services;
 
 namespace Controller_based_APIs.Controllers
 {
@@ -10,10 +11,12 @@ namespace Controller_based_APIs.Controllers
     public class TodoItemsController : ControllerBase
     {
         private readonly IRepository<TodoItemDTO> todoRepo;
+        private readonly IMailService mailService;
 
-        public TodoItemsController(IRepository<TodoItemDTO> todoRepo)
+        public TodoItemsController(IRepository<TodoItemDTO> todoRepo, IMailService mailService)
         {
             this.todoRepo = todoRepo;
+            this.mailService = mailService;
         }
 
         [HttpPost]
@@ -117,6 +120,8 @@ namespace Controller_based_APIs.Controllers
                 return NotFound();
             }
             todoRepo.Delete(id);
+
+            mailService.Send("Item deleted", $"Item with id {id} has been deleted");
 
             return NoContent();
         }
