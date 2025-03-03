@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Serilog;
+using Controller_based_APIs.Data;
+using Controller_based_APIs.Models;
 
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
@@ -15,7 +17,7 @@ Log.Logger = new LoggerConfiguration()
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSerilog();
-
+builder.Services.AddSingleton<IRepository<TodoItemDTO>, InMemoryTodoRepo>();
 
 // Add services to the container.
 

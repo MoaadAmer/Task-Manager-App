@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Controller_based_APIs.Models;
-using Controller_based_APIs.Services;
 using Microsoft.AspNetCore.JsonPatch;
+using Controller_based_APIs.Data;
 
 namespace Controller_based_APIs.Controllers
 {
@@ -9,6 +9,12 @@ namespace Controller_based_APIs.Controllers
     [ApiController]
     public class TodoItemsController : ControllerBase
     {
+        private readonly IRepository<TodoItemDTO> todoRepo;
+
+        public TodoItemsController(IRepository<TodoItemDTO> todoRepo)
+        {
+            this.todoRepo = todoRepo;
+        }
 
         [HttpPost]
         public ActionResult<TodoItemDTO> AddItem(TodoItemForCreationDTO item)
@@ -19,20 +25,20 @@ namespace Controller_based_APIs.Controllers
                 IsComplete = item.IsComplete
             };
 
-            TodoItemsService.Add(todoItem);
+            todoRepo.Add(todoItem);
             return CreatedAtAction(nameof(GetItem), new { id = todoItem.Id }, todoItem);
         }
 
         [HttpGet]
         public ActionResult<IEnumerable<TodoItemDTO>> GetItems()
         {
-            return Ok(TodoItemsService.GetAll());
+            return Ok(todoRepo.GetAll());
         }
 
         [HttpGet("{id}")]
         public ActionResult<TodoItemDTO> GetItem(int id)
         {
-            var todoItem = TodoItemsService.Get(id);
+            var todoItem = todoRepo.Get(id);
 
             return todoItem == null ?
                 NotFound() :
@@ -42,7 +48,7 @@ namespace Controller_based_APIs.Controllers
         [HttpPut("{id}")]
         public IActionResult UpdateItem(int id, TodoItemForUpdateDTO item)
         {
-            if (!TodoItemsService.Exists(id))
+            if (!todoRepo.Exists(id))
             {
                 return NotFound();
             }
@@ -54,7 +60,7 @@ namespace Controller_based_APIs.Controllers
                 IsComplete = item.IsComplete
             };
 
-            TodoItemsService.Update(todoItem);
+            todoRepo.Update(todoItem);
 
             return NoContent();
         }
@@ -64,7 +70,7 @@ namespace Controller_based_APIs.Controllers
         {
             if (patchDoc != null)
             {
-                if (!TodoItemsService.Exists(id))
+                if (!todoRepo.Exists(id))
                 {
                     return NotFound();
                 }
@@ -90,7 +96,7 @@ namespace Controller_based_APIs.Controllers
                         IsComplete = todoItemToPatch.IsComplete
                     };
 
-                    TodoItemsService.Update(todoItem);
+                    todoRepo.Update(todoItem);
 
                     return NoContent();
 
@@ -106,11 +112,11 @@ namespace Controller_based_APIs.Controllers
         [HttpDelete("{id}")]
         public IActionResult DeleteItem(int id)
         {
-            if (!TodoItemsService.Exists(id))
+            if (!todoRepo.Exists(id))
             {
                 return NotFound();
             }
-            TodoItemsService.Delete(id);
+            todoRepo.Delete(id);
 
             return NoContent();
         }

@@ -1,33 +1,33 @@
 ﻿using Controller_based_APIs.Models;
 
-namespace Controller_based_APIs.Services
+namespace Controller_based_APIs.Data
 {
-    public static class TodoItemsService
+    public class InMemoryTodoRepo : IRepository<TodoItemDTO>
     {
-        private static List<TodoItemDTO> TodoItems { get; set; } = [
+        private List<TodoItemDTO> TodoItems { get; set; } = [
             new TodoItemDTO { Id = 1, Name = "Item 1", IsComplete = false },
             new TodoItemDTO { Id = 2, Name = "Item 2", IsComplete = false },
             new TodoItemDTO { Id = 3, Name = "Item 3", IsComplete = false }
         ];
 
-        public static void Add(TodoItemDTO item)
+        public void Add(TodoItemDTO item)
         {
             int id = TodoItems.Count + 1;
             item.Id = id;
             TodoItems.Add(item);
         }
 
-        public static List<TodoItemDTO> GetAll()
+        public IEnumerable<TodoItemDTO> GetAll()
         {
             return TodoItems;
         }
 
-        public static TodoItemDTO? Get(int id)
+        public TodoItemDTO? Get(int id)
         {
             return TodoItems.FirstOrDefault(item => item.Id == id);
         }
 
-        public static void Update(TodoItemDTO item)
+        public void Update(TodoItemDTO item)
         {
             int index = TodoItems.FindIndex(i => i.Id == item.Id);
             if (index != -1)
@@ -36,7 +36,7 @@ namespace Controller_based_APIs.Services
             }
         }
 
-        public static void Delete(int id)
+        public void Delete(int id)
         {
             int index = TodoItems.FindIndex(i => i.Id == id);
             if (index != -1)
@@ -45,7 +45,7 @@ namespace Controller_based_APIs.Services
             }
         }
 
-        public static bool Exists(int id)
+        public bool Exists(int id)
         {
             return TodoItems.Any(item => item.Id == id);
         }
