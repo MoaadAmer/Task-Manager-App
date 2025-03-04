@@ -529,3 +529,1221 @@ System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport 
 2025-03-03 11:17:44.209 +02:00 [DBG] Connection id "0HNAQ6FTKJ6CF" sending FIN because: "The Socket transport's send loop completed gracefully."
 2025-03-03 11:17:44.211 +02:00 [DBG] Connection id "0HNAQ6FTKJ6CF" disconnecting.
 2025-03-03 11:17:44.215 +02:00 [DBG] Connection id "0HNAQ6FTKJ6CF" stopped.
+2025-03-03 12:44:08.257 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-03-03 12:44:09.011 +02:00 [DBG] Hosting starting
+2025-03-03 12:44:10.092 +02:00 [INF] Now listening on: https://localhost:7002
+2025-03-03 12:44:10.100 +02:00 [INF] Now listening on: http://localhost:5118
+2025-03-03 12:44:10.103 +02:00 [DBG] Loaded hosting startup assembly TodoApi
+2025-03-03 12:44:10.105 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-03-03 12:44:10.108 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-03-03 12:44:10.111 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-03-03 12:44:10.272 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 12:44:10.275 +02:00 [INF] Hosting environment: Development
+2025-03-03 12:44:10.278 +02:00 [INF] Content root path: C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi
+2025-03-03 12:44:10.282 +02:00 [DBG] Hosting started
+2025-03-03 12:44:31.261 +02:00 [DBG] Connection id "0HNAQ81GK425Q" accepted.
+2025-03-03 12:44:31.265 +02:00 [DBG] Connection id "0HNAQ81GK425Q" started.
+2025-03-03 12:44:31.270 +02:00 [DBG] Connection id "0HNAQ81GK425R" accepted.
+2025-03-03 12:44:31.275 +02:00 [DBG] Connection id "0HNAQ81GK425R" started.
+2025-03-03 12:44:31.331 +02:00 [DBG] Connection id "0HNAQ81GK425R" received FIN.
+2025-03-03 12:44:31.350 +02:00 [DBG] Connection 0HNAQ81GK425Q established using the following protocol: "Tls13"
+2025-03-03 12:44:31.350 +02:00 [DBG] Connection 0HNAQ81GK425R established using the following protocol: "Tls13"
+2025-03-03 12:44:31.379 +02:00 [DBG] Connection id "0HNAQ81GK425R" is closed. The last processed stream ID was 0.
+2025-03-03 12:44:31.383 +02:00 [DBG] Connection id "0HNAQ81GK425R" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-03-03 12:44:31.387 +02:00 [DBG] The connection queue processing loop for 0HNAQ81GK425R completed.
+2025-03-03 12:44:31.394 +02:00 [DBG] Connection id "0HNAQ81GK425R" stopped.
+2025-03-03 12:44:31.423 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7002/swagger - null null
+2025-03-03 12:44:31.594 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-03-03 12:44:31.625 +02:00 [DBG] No candidates found for the request path '/swagger'
+2025-03-03 12:44:31.628 +02:00 [DBG] Request did not match any endpoints
+2025-03-03 12:44:31.642 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7002/swagger - 301 0 null 225.4698ms
+2025-03-03 12:44:31.646 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7002/swagger/index.html - null null
+2025-03-03 12:44:31.654 +02:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2025-03-03 12:44:31.656 +02:00 [DBG] Request did not match any endpoints
+2025-03-03 12:44:31.700 +02:00 [DBG] Response markup is scheduled to include Browser Link script injection.
+2025-03-03 12:44:31.702 +02:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-03-03 12:44:31.722 +02:00 [DBG] Response markup was updated to include Browser Link script injection.
+2025-03-03 12:44:31.724 +02:00 [DBG] Response markup was updated to include browser refresh script injection.
+2025-03-03 12:44:31.726 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7002/swagger/index.html - 200 null text/html;charset=utf-8 79.539ms
+2025-03-03 12:44:31.731 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7002/swagger/swagger-ui-standalone-preset.js - null null
+2025-03-03 12:44:31.731 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7002/_vs/browserLink - null null
+2025-03-03 12:44:31.730 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7002/swagger/swagger-ui-bundle.js - null null
+2025-03-03 12:44:31.730 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7002/swagger/swagger-ui.css - null null
+2025-03-03 12:44:31.732 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7002/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-03 12:44:31.742 +02:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js'
+2025-03-03 12:44:31.746 +02:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-bundle.js'
+2025-03-03 12:44:31.748 +02:00 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2025-03-03 12:44:31.762 +02:00 [DBG] Request did not match any endpoints
+2025-03-03 12:44:31.767 +02:00 [DBG] Request did not match any endpoints
+2025-03-03 12:44:31.771 +02:00 [DBG] Request did not match any endpoints
+2025-03-03 12:44:31.771 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7002/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 39.7874ms
+2025-03-03 12:44:31.802 +02:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-03-03 12:44:31.802 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-03-03 12:44:31.807 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7002/swagger/swagger-ui.css - 200 152034 text/css 77.0317ms
+2025-03-03 12:44:31.808 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7002/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 76.9636ms
+2025-03-03 12:44:31.837 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7002/_vs/browserLink - 200 null text/javascript; charset=UTF-8 106.1622ms
+2025-03-03 12:44:31.839 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-03-03 12:44:31.846 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7002/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 115.5624ms
+2025-03-03 12:44:31.952 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7002/swagger/v1/swagger.json - null null
+2025-03-03 12:44:31.956 +02:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2025-03-03 12:44:31.958 +02:00 [DBG] Request did not match any endpoints
+2025-03-03 12:44:31.970 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7002/swagger/favicon-32x32.png - null null
+2025-03-03 12:44:31.971 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7002/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.3437ms
+2025-03-03 12:44:31.974 +02:00 [DBG] No candidates found for the request path '/swagger/favicon-32x32.png'
+2025-03-03 12:44:31.978 +02:00 [DBG] Request did not match any endpoints
+2025-03-03 12:44:31.979 +02:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-03-03 12:44:31.981 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7002/swagger/favicon-32x32.png - 200 628 image/png 11.6028ms
+2025-03-03 12:46:35.145 +02:00 [DBG] Connection id "0HNAQ81GK425S" accepted.
+2025-03-03 12:46:35.155 +02:00 [DBG] Connection id "0HNAQ81GK425S" received FIN.
+2025-03-03 12:46:35.249 +02:00 [DBG] Connection id "0HNAQ81GK425T" accepted.
+2025-03-03 12:46:35.230 +02:00 [DBG] Connection id "0HNAQ81GK425S" started.
+2025-03-03 12:46:35.265 +02:00 [DBG] Connection id "0HNAQ81GK425T" started.
+2025-03-03 12:46:36.036 +02:00 [DBG] Connection 0HNAQ81GK425T established using the following protocol: "Tls13"
+2025-03-03 12:46:36.276 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-03-03 12:46:36.280 +02:00 [INF] Request starting HTTP/1.1 PATCH https://localhost:7002/api/todoitems/2 - application/json-patch+json 112
+2025-03-03 12:46:36.365 +02:00 [DBG] Connection id "0HNAQ81GK425S" stopped.
+2025-03-03 12:46:36.373 +02:00 [DBG] Connection id "0HNAQ81GK425S" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-03-03 12:46:36.376 +02:00 [DBG] 1 candidate(s) found for the request path '/api/todoitems/2'
+2025-03-03 12:46:36.391 +02:00 [DBG] Endpoint 'Controller_based_APIs.Controllers.TodoItemsController.PartiallyUpdateItem (TodoApi)' with route pattern 'api/TodoItems/{id}' is valid for the request path '/api/todoitems/2'
+2025-03-03 12:46:36.399 +02:00 [DBG] Request matched endpoint 'Controller_based_APIs.Controllers.TodoItemsController.PartiallyUpdateItem (TodoApi)'
+2025-03-03 12:46:36.404 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 12:46:36.409 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 12:46:36.416 +02:00 [INF] Executing endpoint 'Controller_based_APIs.Controllers.TodoItemsController.PartiallyUpdateItem (TodoApi)'
+2025-03-03 12:46:36.459 +02:00 [INF] Route matched with {action = "PartiallyUpdateItem", controller = "TodoItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PartiallyUpdateItem(Int32, Microsoft.AspNetCore.JsonPatch.JsonPatchDocument`1[Controller_based_APIs.Models.TodoItemForUpdateDTO]) on controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi).
+2025-03-03 12:46:36.472 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-03-03 12:46:36.475 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-03-03 12:46:36.477 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-03-03 12:46:36.481 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-03-03 12:46:36.486 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-03-03 12:46:36.493 +02:00 [DBG] Executing controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 12:46:37.588 +02:00 [INF] Executed action Controller_based_APIs.Controllers.TodoItemsController.PartiallyUpdateItem (TodoApi) in 1091.8127ms
+2025-03-03 12:46:38.004 +02:00 [INF] Executed endpoint 'Controller_based_APIs.Controllers.TodoItemsController.PartiallyUpdateItem (TodoApi)'
+2025-03-03 12:46:38.701 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Controller_based_APIs.Services.IMailService' while attempting to activate 'Controller_based_APIs.Controllers.TodoItemsController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method3(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-03 12:46:38.771 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2025-03-03 12:46:38.782 +02:00 [DBG] No information found on request to perform content negotiation.
+2025-03-03 12:46:38.786 +02:00 [DBG] Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types '["application/problem+json","application/problem+xml"]'.
+2025-03-03 12:46:38.797 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/problem+json' to write the response.
+2025-03-03 12:46:38.857 +02:00 [DBG] Connection id "0HNAQ81GK425T" completed keep alive response.
+2025-03-03 12:46:38.860 +02:00 [INF] Request finished HTTP/1.1 PATCH https://localhost:7002/api/todoitems/2 - 500 null application/problem+json; charset=utf-8 2579.5305ms
+2025-03-03 12:46:38.868 +02:00 [DBG] Connection id "0HNAQ81GK425T", Request id "0HNAQ81GK425T:00000001": started reading request body.
+2025-03-03 12:46:38.872 +02:00 [DBG] Connection id "0HNAQ81GK425T", Request id "0HNAQ81GK425T:00000001": done reading request body.
+2025-03-03 12:48:37.298 +02:00 [DBG] Connection id "0HNAQ81GK425Q" received FIN.
+2025-03-03 12:48:37.314 +02:00 [DBG] Connection id "0HNAQ81GK425Q" is closed. The last processed stream ID was 17.
+2025-03-03 12:48:37.315 +02:00 [DBG] The connection queue processing loop for 0HNAQ81GK425Q completed.
+2025-03-03 12:48:37.317 +02:00 [DBG] Connection id "0HNAQ81GK425Q" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-03-03 12:48:37.326 +02:00 [DBG] Connection id "0HNAQ81GK425Q" stopped.
+2025-03-03 14:28:16.724 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-03-03 14:28:16.844 +02:00 [DBG] Hosting starting
+2025-03-03 14:28:17.137 +02:00 [INF] Now listening on: https://localhost:7002
+2025-03-03 14:28:17.140 +02:00 [INF] Now listening on: http://localhost:5118
+2025-03-03 14:28:17.142 +02:00 [DBG] Loaded hosting startup assembly TodoApi
+2025-03-03 14:28:17.144 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-03-03 14:28:17.145 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-03-03 14:28:17.147 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-03-03 14:28:17.202 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 14:28:17.204 +02:00 [INF] Hosting environment: Development
+2025-03-03 14:28:17.205 +02:00 [INF] Content root path: C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi
+2025-03-03 14:28:17.206 +02:00 [DBG] Hosting started
+2025-03-03 14:28:53.449 +02:00 [DBG] Connection id "0HNAQ9RQT0HFB" received FIN.
+2025-03-03 14:30:02.721 +02:00 [DBG] Connection id "0HNAQ9RQT0HFB" accepted.
+2025-03-03 14:30:02.723 +02:00 [DBG] Connection id "0HNAQ9RQT0HFB" started.
+2025-03-03 14:30:02.731 +02:00 [DBG] Connection id "0HNAQ9RQT0HFC" accepted.
+2025-03-03 14:30:02.732 +02:00 [DBG] Connection id "0HNAQ9RQT0HFC" started.
+2025-03-03 14:30:02.732 +02:00 [DBG] Connection id "0HNAQ9RQT0HFD" received FIN.
+2025-03-03 14:30:02.744 +02:00 [DBG] Connection id "0HNAQ9RQT0HFD" accepted.
+2025-03-03 14:30:02.745 +02:00 [DBG] Connection id "0HNAQ9RQT0HFD" started.
+2025-03-03 14:30:02.746 +02:00 [DBG] Connection id "0HNAQ9RQT0HFE" accepted.
+2025-03-03 14:30:02.753 +02:00 [DBG] Connection id "0HNAQ9RQT0HFE" started.
+2025-03-03 14:30:03.156 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-03-03 14:30:03.156 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-03-03 14:30:03.214 +02:00 [DBG] Connection 0HNAQ9RQT0HFC established using the following protocol: "Tls13"
+2025-03-03 14:30:03.214 +02:00 [DBG] Connection 0HNAQ9RQT0HFE established using the following protocol: "Tls13"
+2025-03-03 14:30:03.217 +02:00 [DBG] Connection id "0HNAQ9RQT0HFB" stopped.
+2025-03-03 14:30:03.219 +02:00 [DBG] Connection id "0HNAQ9RQT0HFD" stopped.
+2025-03-03 14:30:03.224 +02:00 [DBG] Connection id "0HNAQ9RQT0HFD" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-03-03 14:30:03.224 +02:00 [DBG] Connection id "0HNAQ9RQT0HFB" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-03-03 14:30:03.259 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7002/api/todoitems - null null
+2025-03-03 14:30:03.259 +02:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7002/api/todoitems/9 - null null
+2025-03-03 14:30:03.272 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-03-03 14:30:03.272 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-03-03 14:30:03.292 +02:00 [DBG] 1 candidate(s) found for the request path '/api/todoitems'
+2025-03-03 14:30:03.292 +02:00 [DBG] 1 candidate(s) found for the request path '/api/todoitems/9'
+2025-03-03 14:30:03.297 +02:00 [DBG] Endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)' with route pattern 'api/TodoItems/{id}' is valid for the request path '/api/todoitems/9'
+2025-03-03 14:30:03.297 +02:00 [DBG] Endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)' with route pattern 'api/TodoItems' is valid for the request path '/api/todoitems'
+2025-03-03 14:30:03.299 +02:00 [DBG] Request matched endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-03 14:30:03.300 +02:00 [DBG] Request matched endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)'
+2025-03-03 14:30:03.308 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 14:30:03.308 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 14:30:03.309 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 14:30:03.310 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 14:30:03.313 +02:00 [INF] Executing endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-03 14:30:03.313 +02:00 [INF] Executing endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)'
+2025-03-03 14:30:03.330 +02:00 [INF] Route matched with {action = "DeleteItem", controller = "TodoItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteItem(Int32) on controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi).
+2025-03-03 14:30:03.330 +02:00 [INF] Route matched with {action = "GetItems", controller = "TodoItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Controller_based_APIs.Models.TodoItemDTO]] GetItems() on controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi).
+2025-03-03 14:30:03.333 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-03-03 14:30:03.334 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-03-03 14:30:03.336 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-03-03 14:30:03.339 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-03-03 14:30:03.340 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-03-03 14:30:03.342 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-03-03 14:30:03.344 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-03-03 14:30:03.346 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-03-03 14:30:03.347 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-03-03 14:30:03.348 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-03-03 14:30:03.351 +02:00 [DBG] Executing controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 14:30:03.351 +02:00 [DBG] Executing controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 14:30:03.354 +02:00 [DBG] Executed controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 14:30:03.355 +02:00 [DBG] Executed controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 14:30:03.359 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2025-03-03 14:30:03.363 +02:00 [DBG] No information found on request to perform content negotiation.
+2025-03-03 14:30:03.370 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-03-03 14:30:03.371 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-03-03 14:30:03.371 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2025-03-03 14:30:03.373 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-03-03 14:30:03.376 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2025-03-03 14:30:03.376 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Controller_based_APIs.Models.TodoItemDTO, TodoApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-03 14:30:03.378 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2025-03-03 14:30:03.380 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2025-03-03 14:30:03.381 +02:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2025-03-03 14:30:03.386 +02:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2025-03-03 14:30:03.389 +02:00 [INF] Executed action Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi) in 36.4399ms
+2025-03-03 14:30:03.389 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2025-03-03 14:30:03.391 +02:00 [INF] Executed endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)'
+2025-03-03 14:30:03.394 +02:00 [DBG] No information found on request to perform content negotiation.
+2025-03-03 14:30:03.396 +02:00 [DBG] Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types '["application/problem+json","application/problem+xml","application/problem+json","application/problem+xml"]'.
+2025-03-03 14:30:03.396 +02:00 [DBG] Connection id "0HNAQ9RQT0HFE" completed keep alive response.
+2025-03-03 14:30:03.401 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/problem+json' to write the response.
+2025-03-03 14:30:03.404 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7002/api/todoitems - 200 null application/json; charset=utf-8 151.138ms
+2025-03-03 14:30:03.404 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-03-03 14:30:03.427 +02:00 [INF] Executed action Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi) in 77.5983ms
+2025-03-03 14:30:03.430 +02:00 [INF] Executed endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-03 14:30:03.432 +02:00 [DBG] Connection id "0HNAQ9RQT0HFC" completed keep alive response.
+2025-03-03 14:30:03.434 +02:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7002/api/todoitems/9 - 404 null application/problem+json; charset=utf-8 181.7459ms
+2025-03-03 14:30:14.659 +02:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7002/api/todoitems/1 - null null
+2025-03-03 14:30:14.663 +02:00 [DBG] 1 candidate(s) found for the request path '/api/todoitems/1'
+2025-03-03 14:30:14.664 +02:00 [DBG] Endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)' with route pattern 'api/TodoItems/{id}' is valid for the request path '/api/todoitems/1'
+2025-03-03 14:30:14.666 +02:00 [DBG] Request matched endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-03 14:30:14.668 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 14:30:14.669 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 14:30:14.670 +02:00 [INF] Executing endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-03 14:30:14.671 +02:00 [INF] Route matched with {action = "DeleteItem", controller = "TodoItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteItem(Int32) on controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi).
+2025-03-03 14:30:14.673 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-03-03 14:30:14.674 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-03-03 14:30:14.677 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-03-03 14:30:14.679 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-03-03 14:30:14.682 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-03-03 14:30:14.684 +02:00 [DBG] Executing controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 14:30:14.686 +02:00 [DBG] Executed controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 14:30:14.687 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2025-03-03 14:30:14.689 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2025-03-03 14:30:14.690 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2025-03-03 14:30:14.692 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2025-03-03 14:30:14.694 +02:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2025-03-03 14:30:14.696 +02:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2025-03-03 14:30:14.698 +02:00 [INF] Sending email from devFromAddress@gmail.com to devToAddress@gmail.com
+Subject: Item deleted
+Message: Item with id 1 has been deleted
+2025-03-03 14:30:14.701 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-03-03 14:30:14.702 +02:00 [INF] Executed action Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi) in 18.1812ms
+2025-03-03 14:30:14.703 +02:00 [INF] Executed endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-03 14:30:14.704 +02:00 [DBG] Connection id "0HNAQ9RQT0HFE" completed keep alive response.
+2025-03-03 14:30:14.705 +02:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7002/api/todoitems/1 - 204 null null 47.0107ms
+2025-03-03 14:30:50.369 +02:00 [INF] Application is shutting down...
+2025-03-03 14:30:50.370 +02:00 [DBG] Hosting stopping
+2025-03-03 14:30:51.116 +02:00 [DBG] Connection id "0HNAQ9RQT0HFC" disconnecting.
+2025-03-03 14:30:51.116 +02:00 [DBG] Connection id "0HNAQ9RQT0HFE" disconnecting.
+2025-03-03 14:30:51.123 +02:00 [DBG] Connection id "0HNAQ9RQT0HFC" stopped.
+2025-03-03 14:30:51.124 +02:00 [DBG] Connection id "0HNAQ9RQT0HFE" stopped.
+2025-03-03 14:30:51.126 +02:00 [DBG] Connection id "0HNAQ9RQT0HFC" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-03-03 14:30:51.128 +02:00 [DBG] Connection id "0HNAQ9RQT0HFE" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-03-03 14:30:51.138 +02:00 [DBG] Hosting stopped
+2025-03-03 17:11:02.760 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-03-03 17:11:03.464 +02:00 [DBG] Hosting starting
+2025-03-03 17:11:04.339 +02:00 [INF] Now listening on: https://localhost:7002
+2025-03-03 17:11:04.342 +02:00 [INF] Now listening on: http://localhost:5118
+2025-03-03 17:11:04.344 +02:00 [DBG] Loaded hosting startup assembly TodoApi
+2025-03-03 17:11:04.347 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-03-03 17:11:04.350 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-03-03 17:11:04.355 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-03-03 17:11:04.492 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 17:11:04.511 +02:00 [INF] Hosting environment: Development
+2025-03-03 17:11:04.513 +02:00 [INF] Content root path: C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi
+2025-03-03 17:11:04.515 +02:00 [DBG] Hosting started
+2025-03-03 17:12:55.326 +02:00 [DBG] Connection id "0HNAQCNG0EVC2" received FIN.
+2025-03-03 17:12:55.336 +02:00 [DBG] Connection id "0HNAQCNG0EVC2" accepted.
+2025-03-03 17:12:55.339 +02:00 [DBG] Connection id "0HNAQCNG0EVC2" started.
+2025-03-03 17:12:55.348 +02:00 [DBG] Connection id "0HNAQCNG0EVC3" accepted.
+2025-03-03 17:12:55.350 +02:00 [DBG] Connection id "0HNAQCNG0EVC3" started.
+2025-03-03 17:12:55.858 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-03-03 17:12:55.936 +02:00 [DBG] Connection 0HNAQCNG0EVC3 established using the following protocol: "Tls13"
+2025-03-03 17:12:55.952 +02:00 [DBG] Connection id "0HNAQCNG0EVC2" stopped.
+2025-03-03 17:12:55.956 +02:00 [DBG] Connection id "0HNAQCNG0EVC2" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-03-03 17:12:56.014 +02:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7002/api/todoitems/1 - null null
+2025-03-03 17:12:56.033 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-03-03 17:12:56.067 +02:00 [DBG] 1 candidate(s) found for the request path '/api/todoitems/1'
+2025-03-03 17:12:56.074 +02:00 [DBG] Endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)' with route pattern 'api/TodoItems/{id}' is valid for the request path '/api/todoitems/1'
+2025-03-03 17:12:56.079 +02:00 [DBG] Request matched endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-03 17:12:56.094 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 17:12:56.097 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 17:12:56.104 +02:00 [INF] Executing endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-03 17:12:56.138 +02:00 [INF] Route matched with {action = "DeleteItem", controller = "TodoItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteItem(Int32) on controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi).
+2025-03-03 17:12:56.145 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-03-03 17:12:56.149 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-03-03 17:12:56.152 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-03-03 17:12:56.157 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-03-03 17:12:56.162 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-03-03 17:12:56.169 +02:00 [DBG] Executing controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 17:12:56.172 +02:00 [DBG] Executed controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 17:12:56.193 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2025-03-03 17:12:56.196 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2025-03-03 17:12:56.201 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2025-03-03 17:12:56.205 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2025-03-03 17:12:56.207 +02:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2025-03-03 17:12:56.210 +02:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2025-03-03 17:12:56.215 +02:00 [INF] Sending email from devFromAddress@gmail.com to devToAddress@gmail.com
+Subject: Item deleted
+Message: Item with id 1 has been deleted
+2025-03-03 17:12:56.221 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-03-03 17:12:56.226 +02:00 [INF] Executed action Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi) in 57.4689ms
+2025-03-03 17:12:56.229 +02:00 [INF] Executed endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-03 17:12:56.233 +02:00 [DBG] Connection id "0HNAQCNG0EVC3" completed keep alive response.
+2025-03-03 17:12:56.238 +02:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7002/api/todoitems/1 - 204 null null 234.6346ms
+2025-03-03 17:13:51.747 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-03-03 17:13:51.893 +02:00 [DBG] Hosting starting
+2025-03-03 17:13:52.479 +02:00 [INF] Now listening on: https://localhost:7002
+2025-03-03 17:13:52.481 +02:00 [INF] Now listening on: http://localhost:5118
+2025-03-03 17:13:52.484 +02:00 [DBG] Loaded hosting startup assembly TodoApi
+2025-03-03 17:13:52.487 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-03-03 17:13:52.489 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-03-03 17:13:52.491 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-03-03 17:13:52.634 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 17:13:52.655 +02:00 [INF] Hosting environment: Development
+2025-03-03 17:13:52.657 +02:00 [INF] Content root path: C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi
+2025-03-03 17:13:52.660 +02:00 [DBG] Hosting started
+2025-03-03 17:14:08.335 +02:00 [DBG] Connection id "0HNAQCO5ONG9A" received FIN.
+2025-03-03 17:14:08.341 +02:00 [DBG] Connection id "0HNAQCO5ONG9A" accepted.
+2025-03-03 17:14:08.344 +02:00 [DBG] Connection id "0HNAQCO5ONG9A" started.
+2025-03-03 17:14:08.351 +02:00 [DBG] Connection id "0HNAQCO5ONG9B" accepted.
+2025-03-03 17:14:08.352 +02:00 [DBG] Connection id "0HNAQCO5ONG9B" started.
+2025-03-03 17:14:08.636 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-03-03 17:14:08.686 +02:00 [DBG] Connection id "0HNAQCO5ONG9A" stopped.
+2025-03-03 17:14:08.691 +02:00 [DBG] Connection id "0HNAQCO5ONG9A" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-03-03 17:14:08.692 +02:00 [DBG] Connection 0HNAQCO5ONG9B established using the following protocol: "Tls13"
+2025-03-03 17:14:08.733 +02:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7002/api/todoitems/1 - null null
+2025-03-03 17:14:08.752 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-03-03 17:14:08.769 +02:00 [DBG] 1 candidate(s) found for the request path '/api/todoitems/1'
+2025-03-03 17:14:08.773 +02:00 [DBG] Endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)' with route pattern 'api/TodoItems/{id}' is valid for the request path '/api/todoitems/1'
+2025-03-03 17:14:08.776 +02:00 [DBG] Request matched endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-03 17:14:08.783 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 17:14:08.784 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 17:14:08.790 +02:00 [INF] Executing endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-03 17:14:08.816 +02:00 [INF] Route matched with {action = "DeleteItem", controller = "TodoItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteItem(Int32) on controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi).
+2025-03-03 17:14:08.822 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-03-03 17:14:08.825 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-03-03 17:14:08.827 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-03-03 17:14:08.831 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-03-03 17:14:08.833 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-03-03 17:14:08.838 +02:00 [DBG] Executing controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 17:15:02.134 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-03-03 17:15:02.472 +02:00 [DBG] Hosting starting
+2025-03-03 17:15:03.236 +02:00 [INF] Now listening on: https://localhost:7002
+2025-03-03 17:15:03.241 +02:00 [INF] Now listening on: http://localhost:5118
+2025-03-03 17:15:03.245 +02:00 [DBG] Loaded hosting startup assembly TodoApi
+2025-03-03 17:15:03.248 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-03-03 17:15:03.252 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-03-03 17:15:03.256 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-03-03 17:15:03.427 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 17:15:03.445 +02:00 [INF] Hosting environment: Development
+2025-03-03 17:15:03.448 +02:00 [INF] Content root path: C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi
+2025-03-03 17:15:03.450 +02:00 [DBG] Hosting started
+2025-03-03 17:15:09.948 +02:00 [DBG] Connection id "0HNAQCOO4A3T3" received FIN.
+2025-03-03 17:15:09.959 +02:00 [DBG] Connection id "0HNAQCOO4A3T3" accepted.
+2025-03-03 17:15:09.967 +02:00 [DBG] Connection id "0HNAQCOO4A3T3" started.
+2025-03-03 17:15:09.977 +02:00 [DBG] Connection id "0HNAQCOO4A3T4" accepted.
+2025-03-03 17:15:09.979 +02:00 [DBG] Connection id "0HNAQCOO4A3T4" started.
+2025-03-03 17:15:10.112 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-03-03 17:15:10.172 +02:00 [DBG] Connection id "0HNAQCOO4A3T3" stopped.
+2025-03-03 17:15:10.174 +02:00 [DBG] Connection 0HNAQCOO4A3T4 established using the following protocol: "Tls13"
+2025-03-03 17:15:10.178 +02:00 [DBG] Connection id "0HNAQCOO4A3T3" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-03-03 17:15:10.226 +02:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7002/api/todoitems/1 - null null
+2025-03-03 17:15:10.246 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-03-03 17:15:10.276 +02:00 [DBG] 1 candidate(s) found for the request path '/api/todoitems/1'
+2025-03-03 17:15:10.285 +02:00 [DBG] Endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)' with route pattern 'api/TodoItems/{id}' is valid for the request path '/api/todoitems/1'
+2025-03-03 17:15:10.290 +02:00 [DBG] Request matched endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-03 17:15:10.302 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 17:15:10.304 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 17:15:10.309 +02:00 [INF] Executing endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-03 17:15:10.334 +02:00 [INF] Route matched with {action = "DeleteItem", controller = "TodoItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteItem(Int32) on controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi).
+2025-03-03 17:15:10.350 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-03-03 17:15:10.355 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-03-03 17:15:10.362 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-03-03 17:15:10.372 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-03-03 17:15:10.384 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-03-03 17:15:10.397 +02:00 [DBG] Executing controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 17:16:44.765 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-03-03 17:16:45.270 +02:00 [DBG] Hosting starting
+2025-03-03 17:16:46.422 +02:00 [INF] Now listening on: https://localhost:7002
+2025-03-03 17:16:46.425 +02:00 [INF] Now listening on: http://localhost:5118
+2025-03-03 17:16:46.429 +02:00 [DBG] Loaded hosting startup assembly TodoApi
+2025-03-03 17:16:46.432 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-03-03 17:16:46.438 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-03-03 17:16:46.441 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-03-03 17:16:46.575 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 17:16:46.592 +02:00 [INF] Hosting environment: Development
+2025-03-03 17:16:46.596 +02:00 [INF] Content root path: C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi
+2025-03-03 17:16:46.600 +02:00 [DBG] Hosting started
+2025-03-03 17:19:16.772 +02:00 [DBG] Connection id "0HNAQCR1M748A" received FIN.
+2025-03-03 17:19:16.778 +02:00 [DBG] Connection id "0HNAQCR1M748A" accepted.
+2025-03-03 17:19:16.779 +02:00 [DBG] Connection id "0HNAQCR1M748A" started.
+2025-03-03 17:19:16.788 +02:00 [DBG] Connection id "0HNAQCR1M748B" accepted.
+2025-03-03 17:19:16.789 +02:00 [DBG] Connection id "0HNAQCR1M748B" started.
+2025-03-03 17:19:16.879 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-03-03 17:19:16.918 +02:00 [DBG] Connection id "0HNAQCR1M748A" stopped.
+2025-03-03 17:19:16.921 +02:00 [DBG] Connection 0HNAQCR1M748B established using the following protocol: "Tls13"
+2025-03-03 17:19:16.921 +02:00 [DBG] Connection id "0HNAQCR1M748A" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-03-03 17:19:16.949 +02:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7002/api/todoitems/1 - null null
+2025-03-03 17:19:16.961 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-03-03 17:19:16.975 +02:00 [DBG] 1 candidate(s) found for the request path '/api/todoitems/1'
+2025-03-03 17:19:16.978 +02:00 [DBG] Endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)' with route pattern 'api/TodoItems/{id}' is valid for the request path '/api/todoitems/1'
+2025-03-03 17:19:16.980 +02:00 [DBG] Request matched endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-03 17:19:16.986 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 17:19:16.988 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 17:19:16.991 +02:00 [INF] Executing endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-03 17:19:17.004 +02:00 [INF] Route matched with {action = "DeleteItem", controller = "TodoItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteItem(Int32) on controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi).
+2025-03-03 17:19:17.009 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-03-03 17:19:17.010 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-03-03 17:19:17.011 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-03-03 17:19:17.013 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-03-03 17:19:17.014 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-03-03 17:19:17.016 +02:00 [DBG] Executing controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 17:19:50.998 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-03-03 17:19:51.290 +02:00 [DBG] Hosting starting
+2025-03-03 17:19:52.260 +02:00 [INF] Now listening on: https://localhost:7002
+2025-03-03 17:19:52.264 +02:00 [INF] Now listening on: http://localhost:5118
+2025-03-03 17:19:52.268 +02:00 [DBG] Loaded hosting startup assembly TodoApi
+2025-03-03 17:19:52.272 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-03-03 17:19:52.277 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-03-03 17:19:52.280 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-03-03 17:19:52.479 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 17:19:52.501 +02:00 [INF] Hosting environment: Development
+2025-03-03 17:19:52.505 +02:00 [INF] Content root path: C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi
+2025-03-03 17:19:52.510 +02:00 [DBG] Hosting started
+2025-03-03 17:20:10.490 +02:00 [DBG] Connection id "0HNAQCRHMG7OE" received FIN.
+2025-03-03 17:20:10.497 +02:00 [DBG] Connection id "0HNAQCRHMG7OE" accepted.
+2025-03-03 17:20:10.499 +02:00 [DBG] Connection id "0HNAQCRHMG7OE" started.
+2025-03-03 17:20:10.509 +02:00 [DBG] Connection id "0HNAQCRHMG7OF" accepted.
+2025-03-03 17:20:10.510 +02:00 [DBG] Connection id "0HNAQCRHMG7OF" started.
+2025-03-03 17:20:10.590 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-03-03 17:20:10.630 +02:00 [DBG] Connection id "0HNAQCRHMG7OE" stopped.
+2025-03-03 17:20:10.633 +02:00 [DBG] Connection 0HNAQCRHMG7OF established using the following protocol: "Tls13"
+2025-03-03 17:20:10.633 +02:00 [DBG] Connection id "0HNAQCRHMG7OE" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-03-03 17:20:10.661 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7002/api/todoitems - null null
+2025-03-03 17:20:10.678 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-03-03 17:20:10.693 +02:00 [DBG] 1 candidate(s) found for the request path '/api/todoitems'
+2025-03-03 17:20:10.697 +02:00 [DBG] Endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)' with route pattern 'api/TodoItems' is valid for the request path '/api/todoitems'
+2025-03-03 17:20:10.699 +02:00 [DBG] Request matched endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)'
+2025-03-03 17:20:10.706 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 17:20:10.707 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 17:20:10.711 +02:00 [INF] Executing endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)'
+2025-03-03 17:20:10.721 +02:00 [INF] Route matched with {action = "GetItems", controller = "TodoItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Controller_based_APIs.Models.TodoItemDTO]] GetItems() on controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi).
+2025-03-03 17:20:10.727 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-03-03 17:20:10.728 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-03-03 17:20:10.729 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-03-03 17:20:10.732 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-03-03 17:20:10.733 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-03-03 17:20:10.736 +02:00 [DBG] Executing controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 17:21:22.025 +02:00 [DBG] Executed controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 17:21:22.040 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2025-03-03 17:21:22.044 +02:00 [DBG] No information found on request to perform content negotiation.
+2025-03-03 17:21:22.045 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-03-03 17:21:22.046 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-03-03 17:21:22.047 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-03-03 17:21:22.049 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Controller_based_APIs.Models.TodoItemDTO, TodoApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-03 17:21:22.071 +02:00 [INF] Executed action Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi) in 71334.3404ms
+2025-03-03 17:21:22.073 +02:00 [INF] Executed endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)'
+2025-03-03 17:21:22.074 +02:00 [DBG] Connection id "0HNAQCRHMG7OF" completed keep alive response.
+2025-03-03 17:21:22.077 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7002/api/todoitems - 200 null application/json; charset=utf-8 71418.5094ms
+2025-03-03 17:21:36.717 +02:00 [INF] Application is shutting down...
+2025-03-03 17:21:36.718 +02:00 [DBG] Hosting stopping
+2025-03-03 17:21:36.854 +02:00 [DBG] Connection id "0HNAQCRHMG7OF" disconnecting.
+2025-03-03 17:21:36.856 +02:00 [DBG] Connection id "0HNAQCRHMG7OF" stopped.
+2025-03-03 17:21:36.857 +02:00 [DBG] Connection id "0HNAQCRHMG7OF" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-03-03 17:21:36.860 +02:00 [DBG] Hosting stopped
+2025-03-03 17:21:44.766 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-03-03 17:21:45.073 +02:00 [DBG] Hosting starting
+2025-03-03 17:21:46.010 +02:00 [INF] Now listening on: https://localhost:7002
+2025-03-03 17:21:46.014 +02:00 [INF] Now listening on: http://localhost:5118
+2025-03-03 17:21:46.017 +02:00 [DBG] Loaded hosting startup assembly TodoApi
+2025-03-03 17:21:46.019 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-03-03 17:21:46.022 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-03-03 17:21:46.024 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-03-03 17:21:46.154 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 17:21:46.158 +02:00 [INF] Hosting environment: Development
+2025-03-03 17:21:46.161 +02:00 [INF] Content root path: C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi
+2025-03-03 17:21:46.165 +02:00 [DBG] Hosting started
+2025-03-03 17:23:09.099 +02:00 [DBG] Connection id "0HNAQCT6TRID8" received FIN.
+2025-03-03 17:23:09.106 +02:00 [DBG] Connection id "0HNAQCT6TRID8" accepted.
+2025-03-03 17:23:09.109 +02:00 [DBG] Connection id "0HNAQCT6TRID8" started.
+2025-03-03 17:23:09.116 +02:00 [DBG] Connection id "0HNAQCT6TRID9" accepted.
+2025-03-03 17:23:09.117 +02:00 [DBG] Connection id "0HNAQCT6TRID9" started.
+2025-03-03 17:23:09.221 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-03-03 17:23:09.267 +02:00 [DBG] Connection id "0HNAQCT6TRID8" stopped.
+2025-03-03 17:23:09.272 +02:00 [DBG] Connection id "0HNAQCT6TRID8" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-03-03 17:23:09.273 +02:00 [DBG] Connection 0HNAQCT6TRID9 established using the following protocol: "Tls13"
+2025-03-03 17:23:09.310 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7002/api/todoitems - null null
+2025-03-03 17:23:09.326 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-03-03 17:23:09.346 +02:00 [DBG] 1 candidate(s) found for the request path '/api/todoitems'
+2025-03-03 17:23:09.349 +02:00 [DBG] Endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)' with route pattern 'api/TodoItems' is valid for the request path '/api/todoitems'
+2025-03-03 17:23:09.352 +02:00 [DBG] Request matched endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)'
+2025-03-03 17:23:09.363 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 17:23:09.365 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 17:23:09.369 +02:00 [INF] Executing endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)'
+2025-03-03 17:23:09.384 +02:00 [INF] Route matched with {action = "GetItems", controller = "TodoItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Controller_based_APIs.Models.TodoItemDTO]] GetItems() on controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi).
+2025-03-03 17:23:09.392 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-03-03 17:23:09.396 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-03-03 17:23:09.399 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-03-03 17:23:09.401 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-03-03 17:23:09.403 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-03-03 17:23:09.406 +02:00 [DBG] Executing controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 17:23:09.408 +02:00 [DBG] Executed controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 17:23:09.412 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2025-03-03 17:23:09.415 +02:00 [DBG] No information found on request to perform content negotiation.
+2025-03-03 17:23:09.416 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-03-03 17:23:09.416 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-03-03 17:23:09.418 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-03-03 17:23:09.419 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Controller_based_APIs.Models.TodoItemDTO, TodoApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-03 17:23:09.440 +02:00 [INF] Executed action Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi) in 33.0993ms
+2025-03-03 17:23:09.442 +02:00 [INF] Executed endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)'
+2025-03-03 17:23:09.471 +02:00 [DBG] Connection id "0HNAQCT6TRID9" completed keep alive response.
+2025-03-03 17:23:09.474 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7002/api/todoitems - 200 null application/json; charset=utf-8 168.1025ms
+2025-03-03 17:23:20.233 +02:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7002/api/todoitems/1 - null null
+2025-03-03 17:23:20.238 +02:00 [DBG] 1 candidate(s) found for the request path '/api/todoitems/1'
+2025-03-03 17:23:20.239 +02:00 [DBG] Endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)' with route pattern 'api/TodoItems/{id}' is valid for the request path '/api/todoitems/1'
+2025-03-03 17:23:20.241 +02:00 [DBG] Request matched endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-03 17:23:20.243 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 17:23:20.245 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 17:23:20.246 +02:00 [INF] Executing endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-03 17:23:20.253 +02:00 [INF] Route matched with {action = "DeleteItem", controller = "TodoItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteItem(Int32) on controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi).
+2025-03-03 17:23:20.255 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-03-03 17:23:20.257 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-03-03 17:23:20.258 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-03-03 17:23:20.260 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-03-03 17:23:20.261 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-03-03 17:23:20.262 +02:00 [DBG] Executing controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 17:23:20.264 +02:00 [DBG] Executed controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 17:23:20.270 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2025-03-03 17:23:20.273 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2025-03-03 17:23:20.275 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2025-03-03 17:23:20.276 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2025-03-03 17:23:20.277 +02:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2025-03-03 17:23:20.279 +02:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2025-03-03 17:23:20.281 +02:00 [INF] Sending email from devFromAddress@gmail.com to devToAddress@gmail.com
+Subject: Item deleted
+Message: Item with id 1 has been deleted
+2025-03-03 17:23:20.286 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-03-03 17:23:20.287 +02:00 [INF] Executed action Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi) in 24.8375ms
+2025-03-03 17:23:20.288 +02:00 [INF] Executed endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-03 17:23:20.289 +02:00 [DBG] Connection id "0HNAQCT6TRID9" completed keep alive response.
+2025-03-03 17:23:20.290 +02:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7002/api/todoitems/1 - 204 null null 57.2469ms
+2025-03-03 17:26:55.429 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-03-03 17:26:55.545 +02:00 [DBG] Hosting starting
+2025-03-03 17:26:55.842 +02:00 [INF] Now listening on: https://localhost:7002
+2025-03-03 17:26:55.843 +02:00 [INF] Now listening on: http://localhost:5118
+2025-03-03 17:26:55.844 +02:00 [DBG] Loaded hosting startup assembly TodoApi
+2025-03-03 17:26:55.845 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-03-03 17:26:55.846 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-03-03 17:26:55.847 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-03-03 17:26:55.893 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 17:26:55.895 +02:00 [INF] Hosting environment: Development
+2025-03-03 17:26:55.896 +02:00 [INF] Content root path: C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi
+2025-03-03 17:26:55.897 +02:00 [DBG] Hosting started
+2025-03-03 17:27:19.435 +02:00 [DBG] Connection id "0HNAQCVHH82L9" received FIN.
+2025-03-03 17:27:19.440 +02:00 [DBG] Connection id "0HNAQCVHH82L9" accepted.
+2025-03-03 17:27:19.441 +02:00 [DBG] Connection id "0HNAQCVHH82L9" started.
+2025-03-03 17:27:19.451 +02:00 [DBG] Connection id "0HNAQCVHH82LA" accepted.
+2025-03-03 17:27:19.453 +02:00 [DBG] Connection id "0HNAQCVHH82LA" started.
+2025-03-03 17:27:19.527 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-03-03 17:27:19.566 +02:00 [DBG] Connection id "0HNAQCVHH82L9" stopped.
+2025-03-03 17:27:19.569 +02:00 [DBG] Connection id "0HNAQCVHH82L9" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-03-03 17:27:19.569 +02:00 [DBG] Connection 0HNAQCVHH82LA established using the following protocol: "Tls13"
+2025-03-03 17:27:19.598 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7002/api/todoitems - null null
+2025-03-03 17:27:19.615 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-03-03 17:27:19.629 +02:00 [DBG] 1 candidate(s) found for the request path '/api/todoitems'
+2025-03-03 17:27:19.634 +02:00 [DBG] Endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)' with route pattern 'api/TodoItems' is valid for the request path '/api/todoitems'
+2025-03-03 17:27:19.637 +02:00 [DBG] Request matched endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)'
+2025-03-03 17:27:19.643 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 17:27:19.644 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 17:27:19.649 +02:00 [INF] Executing endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)'
+2025-03-03 17:27:19.661 +02:00 [INF] Route matched with {action = "GetItems", controller = "TodoItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Controller_based_APIs.Models.TodoItemDTO]] GetItems() on controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi).
+2025-03-03 17:27:19.664 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-03-03 17:27:19.666 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-03-03 17:27:19.667 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-03-03 17:27:19.670 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-03-03 17:27:19.672 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-03-03 17:27:19.674 +02:00 [DBG] Executing controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 17:27:19.676 +02:00 [DBG] Executed controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 17:27:19.681 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2025-03-03 17:27:19.686 +02:00 [DBG] No information found on request to perform content negotiation.
+2025-03-03 17:27:19.688 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-03-03 17:27:19.688 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-03-03 17:27:19.690 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-03-03 17:27:19.692 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Controller_based_APIs.Models.TodoItemDTO, TodoApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-03 17:27:19.710 +02:00 [INF] Executed action Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi) in 35.4336ms
+2025-03-03 17:27:19.712 +02:00 [INF] Executed endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)'
+2025-03-03 17:27:19.714 +02:00 [DBG] Connection id "0HNAQCVHH82LA" completed keep alive response.
+2025-03-03 17:27:19.717 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7002/api/todoitems - 200 null application/json; charset=utf-8 121.3187ms
+2025-03-03 17:27:22.246 +02:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7002/api/todoitems/1 - null null
+2025-03-03 17:27:22.251 +02:00 [DBG] 1 candidate(s) found for the request path '/api/todoitems/1'
+2025-03-03 17:27:22.252 +02:00 [DBG] Endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)' with route pattern 'api/TodoItems/{id}' is valid for the request path '/api/todoitems/1'
+2025-03-03 17:27:22.254 +02:00 [DBG] Request matched endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-03 17:27:22.257 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 17:27:22.258 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 17:27:22.259 +02:00 [INF] Executing endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-03 17:27:22.265 +02:00 [INF] Route matched with {action = "DeleteItem", controller = "TodoItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteItem(Int32) on controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi).
+2025-03-03 17:27:22.268 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-03-03 17:27:22.270 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-03-03 17:27:22.272 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-03-03 17:27:22.273 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-03-03 17:27:22.275 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-03-03 17:27:22.276 +02:00 [DBG] Executing controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 17:27:22.277 +02:00 [DBG] Executed controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 17:27:22.283 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2025-03-03 17:27:22.287 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2025-03-03 17:27:22.289 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2025-03-03 17:27:22.290 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2025-03-03 17:27:22.291 +02:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2025-03-03 17:27:22.293 +02:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2025-03-03 17:27:22.298 +02:00 [INF] Sending email from devFromAddress@gmail.com to devToAddress@gmail.com
+Subject: Item deleted
+Message: Item with id 1 has been deleted
+2025-03-03 17:27:22.302 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-03-03 17:27:22.303 +02:00 [INF] Executed action Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi) in 27.4423ms
+2025-03-03 17:27:22.304 +02:00 [INF] Executed endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-03 17:27:22.305 +02:00 [DBG] Connection id "0HNAQCVHH82LA" completed keep alive response.
+2025-03-03 17:27:22.306 +02:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7002/api/todoitems/1 - 204 null null 60.0293ms
+2025-03-03 17:27:54.891 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-03-03 17:27:55.015 +02:00 [DBG] Hosting starting
+2025-03-03 17:27:55.345 +02:00 [INF] Now listening on: https://localhost:7002
+2025-03-03 17:27:55.348 +02:00 [INF] Now listening on: http://localhost:5118
+2025-03-03 17:27:55.351 +02:00 [DBG] Loaded hosting startup assembly TodoApi
+2025-03-03 17:27:55.353 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-03-03 17:27:55.356 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-03-03 17:27:55.359 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-03-03 17:27:55.443 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 17:27:55.456 +02:00 [INF] Hosting environment: Development
+2025-03-03 17:27:55.460 +02:00 [INF] Content root path: C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi
+2025-03-03 17:27:55.463 +02:00 [DBG] Hosting started
+2025-03-03 17:28:04.203 +02:00 [DBG] Connection id "0HNAQCVUS62KI" received FIN.
+2025-03-03 17:28:04.209 +02:00 [DBG] Connection id "0HNAQCVUS62KI" accepted.
+2025-03-03 17:28:04.211 +02:00 [DBG] Connection id "0HNAQCVUS62KI" started.
+2025-03-03 17:28:04.213 +02:00 [DBG] Connection id "0HNAQCVUS62KJ" accepted.
+2025-03-03 17:28:04.214 +02:00 [DBG] Connection id "0HNAQCVUS62KJ" started.
+2025-03-03 17:28:04.303 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-03-03 17:28:04.346 +02:00 [DBG] Connection id "0HNAQCVUS62KI" stopped.
+2025-03-03 17:28:04.349 +02:00 [DBG] Connection 0HNAQCVUS62KJ established using the following protocol: "Tls13"
+2025-03-03 17:28:04.349 +02:00 [DBG] Connection id "0HNAQCVUS62KI" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-03-03 17:28:04.389 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7002/api/todoitems - null null
+2025-03-03 17:28:04.409 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-03-03 17:28:04.436 +02:00 [DBG] 1 candidate(s) found for the request path '/api/todoitems'
+2025-03-03 17:28:04.441 +02:00 [DBG] Endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)' with route pattern 'api/TodoItems' is valid for the request path '/api/todoitems'
+2025-03-03 17:28:04.444 +02:00 [DBG] Request matched endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)'
+2025-03-03 17:28:04.455 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 17:28:04.457 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 17:28:04.461 +02:00 [INF] Executing endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)'
+2025-03-03 17:28:04.477 +02:00 [INF] Route matched with {action = "GetItems", controller = "TodoItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Controller_based_APIs.Models.TodoItemDTO]] GetItems() on controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi).
+2025-03-03 17:28:04.481 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-03-03 17:28:04.483 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-03-03 17:28:04.485 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-03-03 17:28:04.489 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-03-03 17:28:04.492 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-03-03 17:28:04.496 +02:00 [DBG] Executing controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 17:29:41.856 +02:00 [DBG] Executed controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 17:29:41.880 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2025-03-03 17:29:41.894 +02:00 [DBG] No information found on request to perform content negotiation.
+2025-03-03 17:29:41.895 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-03-03 17:29:41.897 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-03-03 17:29:41.898 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-03-03 17:29:41.908 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Controller_based_APIs.Models.TodoItemDTO, TodoApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-03 17:29:41.937 +02:00 [INF] Executed action Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi) in 97438.3803ms
+2025-03-03 17:29:41.941 +02:00 [INF] Executed endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)'
+2025-03-03 17:29:41.944 +02:00 [DBG] Connection id "0HNAQCVUS62KJ" completed keep alive response.
+2025-03-03 17:29:41.950 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7002/api/todoitems - 200 null application/json; charset=utf-8 97566.1698ms
+2025-03-03 17:29:42.181 +02:00 [DBG] Config reload token fired. Checking for changes...
+2025-03-03 17:29:42.486 +02:00 [DBG] Config reload token fired. Checking for changes...
+2025-03-03 17:30:22.319 +02:00 [INF] Application is shutting down...
+2025-03-03 17:30:22.330 +02:00 [DBG] Hosting stopping
+2025-03-03 17:30:22.470 +02:00 [DBG] Connection id "0HNAQCVUS62KJ" disconnecting.
+2025-03-03 17:30:22.472 +02:00 [DBG] Connection id "0HNAQCVUS62KJ" stopped.
+2025-03-03 17:30:22.473 +02:00 [DBG] Connection id "0HNAQCVUS62KJ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-03-03 17:30:22.476 +02:00 [DBG] Hosting stopped
+2025-03-03 17:30:30.508 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-03-03 17:30:30.793 +02:00 [DBG] Hosting starting
+2025-03-03 17:30:31.641 +02:00 [INF] Now listening on: https://localhost:7002
+2025-03-03 17:30:31.644 +02:00 [INF] Now listening on: http://localhost:5118
+2025-03-03 17:30:31.646 +02:00 [DBG] Loaded hosting startup assembly TodoApi
+2025-03-03 17:30:31.649 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-03-03 17:30:31.652 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-03-03 17:30:31.655 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-03-03 17:30:31.819 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 17:30:31.841 +02:00 [INF] Hosting environment: Development
+2025-03-03 17:30:31.844 +02:00 [INF] Content root path: C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi
+2025-03-03 17:30:31.846 +02:00 [DBG] Hosting started
+2025-03-03 17:30:33.719 +02:00 [DBG] Connection id "0HNAQD1BE2P83" received FIN.
+2025-03-03 17:30:33.731 +02:00 [DBG] Connection id "0HNAQD1BE2P83" accepted.
+2025-03-03 17:30:33.737 +02:00 [DBG] Connection id "0HNAQD1BE2P83" started.
+2025-03-03 17:30:33.752 +02:00 [DBG] Connection id "0HNAQD1BE2P84" accepted.
+2025-03-03 17:30:33.759 +02:00 [DBG] Connection id "0HNAQD1BE2P84" started.
+2025-03-03 17:30:33.943 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-03-03 17:30:34.012 +02:00 [DBG] Connection id "0HNAQD1BE2P83" stopped.
+2025-03-03 17:30:34.012 +02:00 [DBG] Connection 0HNAQD1BE2P84 established using the following protocol: "Tls13"
+2025-03-03 17:30:34.022 +02:00 [DBG] Connection id "0HNAQD1BE2P83" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-03-03 17:30:34.073 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7002/api/todoitems - null null
+2025-03-03 17:30:34.097 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-03-03 17:30:34.125 +02:00 [DBG] 1 candidate(s) found for the request path '/api/todoitems'
+2025-03-03 17:30:34.130 +02:00 [DBG] Endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)' with route pattern 'api/TodoItems' is valid for the request path '/api/todoitems'
+2025-03-03 17:30:34.137 +02:00 [DBG] Request matched endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)'
+2025-03-03 17:30:34.150 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 17:30:34.154 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 17:30:34.160 +02:00 [INF] Executing endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)'
+2025-03-03 17:30:34.184 +02:00 [INF] Route matched with {action = "GetItems", controller = "TodoItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Controller_based_APIs.Models.TodoItemDTO]] GetItems() on controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi).
+2025-03-03 17:30:34.190 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-03-03 17:30:34.194 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-03-03 17:30:34.197 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-03-03 17:30:34.208 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-03-03 17:30:34.210 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-03-03 17:30:34.215 +02:00 [DBG] Executing controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 17:36:18.384 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-03-03 17:36:18.770 +02:00 [DBG] Hosting starting
+2025-03-03 17:36:19.797 +02:00 [INF] Now listening on: https://localhost:7002
+2025-03-03 17:36:19.800 +02:00 [INF] Now listening on: http://localhost:5118
+2025-03-03 17:36:19.803 +02:00 [DBG] Loaded hosting startup assembly TodoApi
+2025-03-03 17:36:19.805 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-03-03 17:36:19.807 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-03-03 17:36:19.810 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-03-03 17:36:19.994 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 17:36:19.999 +02:00 [INF] Hosting environment: Development
+2025-03-03 17:36:20.003 +02:00 [INF] Content root path: C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi
+2025-03-03 17:36:20.007 +02:00 [DBG] Hosting started
+2025-03-03 17:36:55.853 +02:00 [DBG] Connection id "0HNAQD4TACUDR" received FIN.
+2025-03-03 17:36:55.862 +02:00 [DBG] Connection id "0HNAQD4TACUDR" accepted.
+2025-03-03 17:36:55.895 +02:00 [DBG] Connection id "0HNAQD4TACUDR" started.
+2025-03-03 17:36:55.898 +02:00 [DBG] Connection id "0HNAQD4TACUDS" accepted.
+2025-03-03 17:36:55.900 +02:00 [DBG] Connection id "0HNAQD4TACUDS" started.
+2025-03-03 17:36:56.007 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-03-03 17:36:56.070 +02:00 [DBG] Connection 0HNAQD4TACUDS established using the following protocol: "Tls13"
+2025-03-03 17:36:56.070 +02:00 [DBG] Connection id "0HNAQD4TACUDR" stopped.
+2025-03-03 17:36:56.077 +02:00 [DBG] Connection id "0HNAQD4TACUDR" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-03-03 17:36:56.113 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7002/api/todoitems - null null
+2025-03-03 17:36:56.130 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-03-03 17:36:56.147 +02:00 [DBG] 1 candidate(s) found for the request path '/api/todoitems'
+2025-03-03 17:36:56.152 +02:00 [DBG] Endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)' with route pattern 'api/TodoItems' is valid for the request path '/api/todoitems'
+2025-03-03 17:36:56.159 +02:00 [DBG] Request matched endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)'
+2025-03-03 17:36:56.167 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 17:36:56.168 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 17:36:56.173 +02:00 [INF] Executing endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)'
+2025-03-03 17:36:56.188 +02:00 [INF] Route matched with {action = "GetItems", controller = "TodoItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Controller_based_APIs.Models.TodoItemDTO]] GetItems() on controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi).
+2025-03-03 17:36:56.192 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-03-03 17:36:56.194 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-03-03 17:36:56.195 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-03-03 17:36:56.197 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-03-03 17:36:56.198 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-03-03 17:36:56.204 +02:00 [DBG] Executing controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 17:37:14.880 +02:00 [DBG] Executed controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 17:37:14.889 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2025-03-03 17:37:14.894 +02:00 [DBG] No information found on request to perform content negotiation.
+2025-03-03 17:37:14.895 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-03-03 17:37:14.895 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-03-03 17:37:14.896 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-03-03 17:37:14.898 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Controller_based_APIs.Models.TodoItemDTO, TodoApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-03 17:37:14.919 +02:00 [INF] Executed action Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi) in 18714.4732ms
+2025-03-03 17:37:14.920 +02:00 [INF] Executed endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)'
+2025-03-03 17:37:14.921 +02:00 [DBG] Connection id "0HNAQD4TACUDS" completed keep alive response.
+2025-03-03 17:37:14.923 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7002/api/todoitems - 200 null application/json; charset=utf-8 18815.907ms
+2025-03-03 17:37:30.909 +02:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7002/api/todoitems/1 - null null
+2025-03-03 17:37:30.912 +02:00 [DBG] 1 candidate(s) found for the request path '/api/todoitems/1'
+2025-03-03 17:37:30.913 +02:00 [DBG] Endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)' with route pattern 'api/TodoItems/{id}' is valid for the request path '/api/todoitems/1'
+2025-03-03 17:37:30.914 +02:00 [DBG] Request matched endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-03 17:37:30.916 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 17:37:30.917 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 17:37:30.918 +02:00 [INF] Executing endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-03 17:37:30.927 +02:00 [INF] Route matched with {action = "DeleteItem", controller = "TodoItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteItem(Int32) on controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi).
+2025-03-03 17:37:30.930 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-03-03 17:37:30.931 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-03-03 17:37:30.933 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-03-03 17:37:30.936 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-03-03 17:37:30.937 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-03-03 17:37:30.938 +02:00 [DBG] Executing controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 17:37:30.939 +02:00 [DBG] Executed controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 17:37:30.945 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2025-03-03 17:37:30.947 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2025-03-03 17:37:30.951 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2025-03-03 17:37:30.952 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2025-03-03 17:37:30.953 +02:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2025-03-03 17:37:30.956 +02:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2025-03-03 17:37:30.958 +02:00 [INF] Sending email from devFromAddress@gmail.com to devToAddress@gmail.com
+Subject: Item deleted
+Message: Item with id 1 has been deleted
+2025-03-03 17:37:30.962 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-03-03 17:37:30.963 +02:00 [INF] Executed action Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi) in 25.4188ms
+2025-03-03 17:37:30.965 +02:00 [INF] Executed endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-03 17:37:30.966 +02:00 [DBG] Connection id "0HNAQD4TACUDS" completed keep alive response.
+2025-03-03 17:37:30.968 +02:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7002/api/todoitems/1 - 204 null null 59.2557ms
+2025-03-03 17:37:56.466 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-03-03 17:37:56.981 +02:00 [DBG] Hosting starting
+2025-03-03 17:37:58.590 +02:00 [INF] Now listening on: https://localhost:7002
+2025-03-03 17:37:58.603 +02:00 [INF] Now listening on: http://localhost:5118
+2025-03-03 17:37:58.615 +02:00 [DBG] Loaded hosting startup assembly TodoApi
+2025-03-03 17:37:58.623 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-03-03 17:37:58.667 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-03-03 17:37:58.813 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-03-03 17:37:59.087 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 17:37:59.141 +02:00 [INF] Hosting environment: Development
+2025-03-03 17:37:59.153 +02:00 [INF] Content root path: C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi
+2025-03-03 17:37:59.160 +02:00 [DBG] Hosting started
+2025-03-03 17:38:20.929 +02:00 [DBG] Connection id "0HNAQD5MLNT3H" received FIN.
+2025-03-03 17:38:20.935 +02:00 [DBG] Connection id "0HNAQD5MLNT3H" accepted.
+2025-03-03 17:38:20.938 +02:00 [DBG] Connection id "0HNAQD5MLNT3H" started.
+2025-03-03 17:38:20.946 +02:00 [DBG] Connection id "0HNAQD5MLNT3I" accepted.
+2025-03-03 17:38:20.947 +02:00 [DBG] Connection id "0HNAQD5MLNT3I" started.
+2025-03-03 17:38:21.038 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-03-03 17:38:21.087 +02:00 [DBG] Connection 0HNAQD5MLNT3I established using the following protocol: "Tls13"
+2025-03-03 17:38:21.087 +02:00 [DBG] Connection id "0HNAQD5MLNT3H" stopped.
+2025-03-03 17:38:21.092 +02:00 [DBG] Connection id "0HNAQD5MLNT3H" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-03-03 17:38:21.120 +02:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7002/api/todoitems/1 - null null
+2025-03-03 17:38:21.132 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-03-03 17:38:21.148 +02:00 [DBG] 1 candidate(s) found for the request path '/api/todoitems/1'
+2025-03-03 17:38:21.153 +02:00 [DBG] Endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)' with route pattern 'api/TodoItems/{id}' is valid for the request path '/api/todoitems/1'
+2025-03-03 17:38:21.156 +02:00 [DBG] Request matched endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-03 17:38:21.161 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 17:38:21.162 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 17:38:21.164 +02:00 [INF] Executing endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-03 17:38:21.179 +02:00 [INF] Route matched with {action = "DeleteItem", controller = "TodoItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteItem(Int32) on controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi).
+2025-03-03 17:38:21.184 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-03-03 17:38:21.186 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-03-03 17:38:21.188 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-03-03 17:38:21.189 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-03-03 17:38:21.191 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-03-03 17:38:21.193 +02:00 [DBG] Executing controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 17:38:21.195 +02:00 [DBG] Executed controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 17:38:21.209 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2025-03-03 17:38:21.212 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2025-03-03 17:38:21.214 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2025-03-03 17:38:21.216 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2025-03-03 17:38:21.219 +02:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2025-03-03 17:38:21.224 +02:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2025-03-03 17:38:21.227 +02:00 [INF] Sending email from devFromAddress@gmail.com to devToAddress@gmail.com
+Subject: Item deleted
+Message: Item with id 1 has been deleted
+2025-03-03 17:38:21.231 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-03-03 17:38:21.236 +02:00 [INF] Executed action Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi) in 41.857ms
+2025-03-03 17:38:21.238 +02:00 [INF] Executed endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-03 17:38:21.240 +02:00 [DBG] Connection id "0HNAQD5MLNT3I" completed keep alive response.
+2025-03-03 17:38:21.243 +02:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7002/api/todoitems/1 - 204 null null 126.49ms
+2025-03-03 17:46:04.808 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-03-03 17:46:05.184 +02:00 [DBG] Hosting starting
+2025-03-03 17:46:06.286 +02:00 [INF] Now listening on: https://localhost:7002
+2025-03-03 17:46:06.289 +02:00 [INF] Now listening on: http://localhost:5118
+2025-03-03 17:46:06.293 +02:00 [DBG] Loaded hosting startup assembly TodoApi
+2025-03-03 17:46:06.296 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-03-03 17:46:06.299 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-03-03 17:46:06.302 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-03-03 17:46:06.490 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 17:46:06.683 +02:00 [INF] Hosting environment: Development
+2025-03-03 17:46:06.703 +02:00 [INF] Content root path: C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi
+2025-03-03 17:46:06.787 +02:00 [DBG] Hosting started
+2025-03-03 17:46:23.833 +02:00 [DBG] Connection id "0HNAQDA6J2K3A" received FIN.
+2025-03-03 17:46:23.841 +02:00 [DBG] Connection id "0HNAQDA6J2K3A" accepted.
+2025-03-03 17:46:23.845 +02:00 [DBG] Connection id "0HNAQDA6J2K3A" started.
+2025-03-03 17:46:23.847 +02:00 [DBG] Connection id "0HNAQDA6J2K3B" accepted.
+2025-03-03 17:46:23.848 +02:00 [DBG] Connection id "0HNAQDA6J2K3B" started.
+2025-03-03 17:46:23.941 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-03-03 17:46:23.996 +02:00 [DBG] Connection id "0HNAQDA6J2K3A" stopped.
+2025-03-03 17:46:24.000 +02:00 [DBG] Connection 0HNAQDA6J2K3B established using the following protocol: "Tls13"
+2025-03-03 17:46:24.001 +02:00 [DBG] Connection id "0HNAQDA6J2K3A" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-03-03 17:46:24.048 +02:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7002/api/todoitems/1 - null null
+2025-03-03 17:46:24.065 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-03-03 17:46:24.089 +02:00 [DBG] 1 candidate(s) found for the request path '/api/todoitems/1'
+2025-03-03 17:46:24.096 +02:00 [DBG] Endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)' with route pattern 'api/TodoItems/{id}' is valid for the request path '/api/todoitems/1'
+2025-03-03 17:46:24.101 +02:00 [DBG] Request matched endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-03 17:46:24.107 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 17:46:24.110 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 17:46:24.113 +02:00 [INF] Executing endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-03 17:46:24.130 +02:00 [INF] Route matched with {action = "DeleteItem", controller = "TodoItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteItem(Int32) on controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi).
+2025-03-03 17:46:24.137 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-03-03 17:46:24.138 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-03-03 17:46:24.142 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-03-03 17:46:24.146 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-03-03 17:46:24.148 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-03-03 17:46:24.151 +02:00 [DBG] Executing controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 17:46:24.154 +02:00 [DBG] Executed controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 17:46:24.167 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2025-03-03 17:46:24.170 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2025-03-03 17:46:24.172 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2025-03-03 17:46:24.175 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2025-03-03 17:46:24.177 +02:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2025-03-03 17:46:24.182 +02:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2025-03-03 17:46:24.185 +02:00 [INF] Sending email from devFromAddress@gmail.com to devToAddress@gmail.com
+Subject: Item deleted
+Message: Item with id 1 has been deleted
+2025-03-03 17:46:24.188 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-03-03 17:46:24.192 +02:00 [INF] Executed action Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi) in 39.8154ms
+2025-03-03 17:46:24.196 +02:00 [INF] Executed endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-03 17:46:24.198 +02:00 [DBG] Connection id "0HNAQDA6J2K3B" completed keep alive response.
+2025-03-03 17:46:24.200 +02:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7002/api/todoitems/1 - 204 null null 158.2453ms
+2025-03-03 23:26:49.156 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-03-03 23:26:49.796 +02:00 [DBG] Hosting starting
+2025-03-03 23:26:51.671 +02:00 [INF] Now listening on: https://localhost:7002
+2025-03-03 23:26:51.686 +02:00 [INF] Now listening on: http://localhost:5118
+2025-03-03 23:26:51.708 +02:00 [DBG] Loaded hosting startup assembly TodoApi
+2025-03-03 23:26:51.714 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-03-03 23:26:51.721 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-03-03 23:26:51.734 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-03-03 23:26:52.227 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 23:26:52.302 +02:00 [INF] Hosting environment: Development
+2025-03-03 23:26:52.309 +02:00 [INF] Content root path: C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi
+2025-03-03 23:26:52.342 +02:00 [DBG] Hosting started
+2025-03-03 23:27:19.278 +02:00 [DBG] Connection id "0HNAQJ8MPCKNQ" received FIN.
+2025-03-03 23:27:19.295 +02:00 [DBG] Connection id "0HNAQJ8MPCKNQ" accepted.
+2025-03-03 23:27:19.301 +02:00 [DBG] Connection id "0HNAQJ8MPCKNQ" started.
+2025-03-03 23:27:19.323 +02:00 [DBG] Connection id "0HNAQJ8MPCKNR" accepted.
+2025-03-03 23:27:19.328 +02:00 [DBG] Connection id "0HNAQJ8MPCKNR" started.
+2025-03-03 23:27:20.379 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-03-03 23:27:20.509 +02:00 [DBG] Connection 0HNAQJ8MPCKNR established using the following protocol: "Tls13"
+2025-03-03 23:27:20.511 +02:00 [DBG] Connection id "0HNAQJ8MPCKNQ" stopped.
+2025-03-03 23:27:20.527 +02:00 [DBG] Connection id "0HNAQJ8MPCKNQ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-03-03 23:27:20.693 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7002/api/todoitems - null null
+2025-03-03 23:27:20.824 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-03-03 23:27:20.882 +02:00 [DBG] 1 candidate(s) found for the request path '/api/todoitems'
+2025-03-03 23:27:20.893 +02:00 [DBG] Endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)' with route pattern 'api/TodoItems' is valid for the request path '/api/todoitems'
+2025-03-03 23:27:20.905 +02:00 [DBG] Request matched endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)'
+2025-03-03 23:27:20.936 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 23:27:20.939 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 23:27:20.952 +02:00 [INF] Executing endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)'
+2025-03-03 23:27:20.996 +02:00 [INF] Route matched with {action = "GetItems", controller = "TodoItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Controller_based_APIs.Models.TodoItemDTO]] GetItems() on controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi).
+2025-03-03 23:27:21.016 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-03-03 23:27:21.022 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-03-03 23:27:21.028 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-03-03 23:27:21.041 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-03-03 23:27:21.047 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-03-03 23:27:21.059 +02:00 [DBG] Executing controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 23:27:21.069 +02:00 [DBG] Executed controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 23:27:21.083 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2025-03-03 23:27:21.100 +02:00 [DBG] No information found on request to perform content negotiation.
+2025-03-03 23:27:21.103 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-03-03 23:27:21.108 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-03-03 23:27:21.113 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-03-03 23:27:21.123 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Controller_based_APIs.Models.TodoItemDTO, TodoApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-03 23:27:21.197 +02:00 [INF] Executed action Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi) in 135.0502ms
+2025-03-03 23:27:21.207 +02:00 [INF] Executed endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)'
+2025-03-03 23:27:21.213 +02:00 [DBG] Connection id "0HNAQJ8MPCKNR" completed keep alive response.
+2025-03-03 23:27:21.224 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7002/api/todoitems - 200 null application/json; charset=utf-8 618.3208ms
+2025-03-03 23:27:36.015 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7002/api/todoitems - application/json 117
+2025-03-03 23:27:36.024 +02:00 [DBG] 1 candidate(s) found for the request path '/api/todoitems'
+2025-03-03 23:27:36.028 +02:00 [DBG] Endpoint 'Controller_based_APIs.Controllers.TodoItemsController.AddItem (TodoApi)' with route pattern 'api/TodoItems' is valid for the request path '/api/todoitems'
+2025-03-03 23:27:36.038 +02:00 [DBG] Request matched endpoint 'Controller_based_APIs.Controllers.TodoItemsController.AddItem (TodoApi)'
+2025-03-03 23:27:36.045 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 23:27:36.050 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 23:27:36.054 +02:00 [INF] Executing endpoint 'Controller_based_APIs.Controllers.TodoItemsController.AddItem (TodoApi)'
+2025-03-03 23:27:36.074 +02:00 [INF] Route matched with {action = "AddItem", controller = "TodoItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Controller_based_APIs.Models.TodoItemDTO] AddItem(Controller_based_APIs.Models.TodoItemForCreationDTO) on controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi).
+2025-03-03 23:27:36.086 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-03-03 23:27:36.092 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-03-03 23:27:36.099 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-03-03 23:27:36.116 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-03-03 23:27:36.129 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-03-03 23:27:36.143 +02:00 [DBG] Executing controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 23:27:36.151 +02:00 [DBG] Executed controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 23:27:36.175 +02:00 [DBG] Attempting to bind parameter 'item' of type 'Controller_based_APIs.Models.TodoItemForCreationDTO' ...
+2025-03-03 23:27:36.184 +02:00 [DBG] Attempting to bind parameter 'item' of type 'Controller_based_APIs.Models.TodoItemForCreationDTO' using the name '' in request data ...
+2025-03-03 23:27:36.195 +02:00 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json'.
+2025-03-03 23:27:36.250 +02:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-03-03 23:27:36.272 +02:00 [DBG] Connection id "0HNAQJ8MPCKNR", Request id "0HNAQJ8MPCKNR:00000002": started reading request body.
+2025-03-03 23:27:36.277 +02:00 [DBG] Connection id "0HNAQJ8MPCKNR", Request id "0HNAQJ8MPCKNR:00000002": done reading request body.
+2025-03-03 23:27:36.290 +02:00 [DBG] JSON input formatter succeeded, deserializing to type 'Controller_based_APIs.Models.TodoItemForCreationDTO'
+2025-03-03 23:27:36.298 +02:00 [DBG] Done attempting to bind parameter 'item' of type 'Controller_based_APIs.Models.TodoItemForCreationDTO'.
+2025-03-03 23:27:36.304 +02:00 [DBG] Done attempting to bind parameter 'item' of type 'Controller_based_APIs.Models.TodoItemForCreationDTO'.
+2025-03-03 23:27:36.311 +02:00 [DBG] Attempting to validate the bound parameter 'item' of type 'Controller_based_APIs.Models.TodoItemForCreationDTO' ...
+2025-03-03 23:27:36.345 +02:00 [DBG] Done attempting to validate the bound parameter 'item' of type 'Controller_based_APIs.Models.TodoItemForCreationDTO'.
+2025-03-03 23:27:36.360 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2025-03-03 23:27:36.378 +02:00 [DBG] No information found on request to perform content negotiation.
+2025-03-03 23:27:36.381 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-03-03 23:27:36.385 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-03-03 23:27:36.388 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-03-03 23:27:36.400 +02:00 [INF] Executing CreatedAtActionResult, writing value of type 'Controller_based_APIs.Models.TodoItemDTO'.
+2025-03-03 23:27:36.453 +02:00 [DBG] Found the endpoints ["Controller_based_APIs.Controllers.TodoItemsController.GetItem (TodoApi)"] for address (id=[4],action=[GetItem],controller=[TodoItems])
+2025-03-03 23:27:36.465 +02:00 [DBG] Successfully processed template api/TodoItems/{id} for Controller_based_APIs.Controllers.TodoItemsController.GetItem (TodoApi) resulting in /api/TodoItems/4 and 
+2025-03-03 23:27:36.476 +02:00 [DBG] Link generation succeeded for endpoints ["Controller_based_APIs.Controllers.TodoItemsController.GetItem (TodoApi)"] with result /api/TodoItems/4
+2025-03-03 23:27:36.483 +02:00 [INF] Executed action Controller_based_APIs.Controllers.TodoItemsController.AddItem (TodoApi) in 339.8705ms
+2025-03-03 23:27:36.489 +02:00 [INF] Executed endpoint 'Controller_based_APIs.Controllers.TodoItemsController.AddItem (TodoApi)'
+2025-03-03 23:27:36.493 +02:00 [DBG] Connection id "0HNAQJ8MPCKNR" completed keep alive response.
+2025-03-03 23:27:36.498 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7002/api/todoitems - 201 null application/json; charset=utf-8 483.6754ms
+2025-03-03 23:33:40.033 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-03-03 23:33:40.369 +02:00 [DBG] Hosting starting
+2025-03-03 23:33:41.287 +02:00 [INF] Now listening on: https://localhost:7002
+2025-03-03 23:33:41.290 +02:00 [INF] Now listening on: http://localhost:5118
+2025-03-03 23:33:41.292 +02:00 [DBG] Loaded hosting startup assembly TodoApi
+2025-03-03 23:33:41.294 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-03-03 23:33:41.295 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-03-03 23:33:41.297 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-03-03 23:33:41.421 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 23:33:41.425 +02:00 [INF] Hosting environment: Development
+2025-03-03 23:33:41.428 +02:00 [INF] Content root path: C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi
+2025-03-03 23:33:41.430 +02:00 [DBG] Hosting started
+2025-03-03 23:37:33.230 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-03-03 23:37:33.502 +02:00 [DBG] Hosting starting
+2025-03-03 23:37:34.106 +02:00 [INF] Now listening on: https://localhost:7002
+2025-03-03 23:37:34.107 +02:00 [INF] Now listening on: http://localhost:5118
+2025-03-03 23:37:34.110 +02:00 [DBG] Loaded hosting startup assembly TodoApi
+2025-03-03 23:37:34.112 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-03-03 23:37:34.116 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-03-03 23:37:34.120 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-03-03 23:37:34.278 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 23:37:34.282 +02:00 [INF] Hosting environment: Development
+2025-03-03 23:37:34.285 +02:00 [INF] Content root path: C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi
+2025-03-03 23:37:34.290 +02:00 [DBG] Hosting started
+2025-03-03 23:37:58.577 +02:00 [DBG] Connection id "0HNAQJELA7F0M" received FIN.
+2025-03-03 23:37:58.589 +02:00 [DBG] Connection id "0HNAQJELA7F0M" accepted.
+2025-03-03 23:37:58.595 +02:00 [DBG] Connection id "0HNAQJELA7F0M" started.
+2025-03-03 23:37:58.612 +02:00 [DBG] Connection id "0HNAQJELA7F0N" accepted.
+2025-03-03 23:37:58.616 +02:00 [DBG] Connection id "0HNAQJELA7F0N" started.
+2025-03-03 23:37:59.768 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-03-03 23:37:59.872 +02:00 [DBG] Connection 0HNAQJELA7F0N established using the following protocol: "Tls13"
+2025-03-03 23:37:59.878 +02:00 [DBG] Connection id "0HNAQJELA7F0M" stopped.
+2025-03-03 23:37:59.885 +02:00 [DBG] Connection id "0HNAQJELA7F0M" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-03-03 23:37:59.941 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7002/api/todoitems - null null
+2025-03-03 23:37:59.976 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-03-03 23:38:00.004 +02:00 [DBG] 1 candidate(s) found for the request path '/api/todoitems'
+2025-03-03 23:38:00.025 +02:00 [DBG] Endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)' with route pattern 'api/TodoItems' is valid for the request path '/api/todoitems'
+2025-03-03 23:38:00.034 +02:00 [DBG] Request matched endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)'
+2025-03-03 23:38:00.052 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 23:38:00.058 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 23:38:00.069 +02:00 [INF] Executing endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)'
+2025-03-03 23:38:00.103 +02:00 [INF] Route matched with {action = "GetItems", controller = "TodoItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Controller_based_APIs.Models.TodoItemDTO]] GetItems() on controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi).
+2025-03-03 23:38:00.114 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-03-03 23:38:00.117 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-03-03 23:38:00.122 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-03-03 23:38:00.129 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-03-03 23:38:00.134 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-03-03 23:38:00.143 +02:00 [DBG] Executing controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 23:38:00.149 +02:00 [DBG] Executed controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 23:38:00.159 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2025-03-03 23:38:00.170 +02:00 [DBG] No information found on request to perform content negotiation.
+2025-03-03 23:38:00.172 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-03-03 23:38:00.177 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-03-03 23:38:00.188 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-03-03 23:38:00.198 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Controller_based_APIs.Models.TodoItemDTO, TodoApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-03 23:38:00.257 +02:00 [INF] Executed action Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi) in 111.681ms
+2025-03-03 23:38:00.263 +02:00 [INF] Executed endpoint 'Controller_based_APIs.Controllers.TodoItemsController.GetItems (TodoApi)'
+2025-03-03 23:38:00.269 +02:00 [DBG] Connection id "0HNAQJELA7F0N" completed keep alive response.
+2025-03-03 23:38:00.277 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7002/api/todoitems - 200 null application/json; charset=utf-8 344.1814ms
+2025-03-03 23:38:05.808 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7002/api/todoitems - application/json 117
+2025-03-03 23:38:05.815 +02:00 [DBG] 1 candidate(s) found for the request path '/api/todoitems'
+2025-03-03 23:38:05.817 +02:00 [DBG] Endpoint 'Controller_based_APIs.Controllers.TodoItemsController.AddItem (TodoApi)' with route pattern 'api/TodoItems' is valid for the request path '/api/todoitems'
+2025-03-03 23:38:05.822 +02:00 [DBG] Request matched endpoint 'Controller_based_APIs.Controllers.TodoItemsController.AddItem (TodoApi)'
+2025-03-03 23:38:05.826 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 23:38:05.829 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 23:38:05.834 +02:00 [INF] Executing endpoint 'Controller_based_APIs.Controllers.TodoItemsController.AddItem (TodoApi)'
+2025-03-03 23:38:05.846 +02:00 [INF] Route matched with {action = "AddItem", controller = "TodoItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Controller_based_APIs.Models.TodoItemDTO] AddItem(Controller_based_APIs.Models.TodoItemForCreationDTO) on controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi).
+2025-03-03 23:38:05.851 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-03-03 23:38:05.853 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-03-03 23:38:05.859 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-03-03 23:38:05.865 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-03-03 23:38:05.867 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-03-03 23:38:05.874 +02:00 [DBG] Executing controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 23:38:05.879 +02:00 [DBG] Executed controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 23:38:05.892 +02:00 [DBG] Attempting to bind parameter 'item' of type 'Controller_based_APIs.Models.TodoItemForCreationDTO' ...
+2025-03-03 23:38:05.901 +02:00 [DBG] Attempting to bind parameter 'item' of type 'Controller_based_APIs.Models.TodoItemForCreationDTO' using the name '' in request data ...
+2025-03-03 23:38:05.908 +02:00 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json'.
+2025-03-03 23:38:05.917 +02:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-03-03 23:38:05.933 +02:00 [DBG] Connection id "0HNAQJELA7F0N", Request id "0HNAQJELA7F0N:00000002": started reading request body.
+2025-03-03 23:38:05.938 +02:00 [DBG] Connection id "0HNAQJELA7F0N", Request id "0HNAQJELA7F0N:00000002": done reading request body.
+2025-03-03 23:38:05.945 +02:00 [DBG] JSON input formatter succeeded, deserializing to type 'Controller_based_APIs.Models.TodoItemForCreationDTO'
+2025-03-03 23:38:05.949 +02:00 [DBG] Done attempting to bind parameter 'item' of type 'Controller_based_APIs.Models.TodoItemForCreationDTO'.
+2025-03-03 23:38:05.952 +02:00 [DBG] Done attempting to bind parameter 'item' of type 'Controller_based_APIs.Models.TodoItemForCreationDTO'.
+2025-03-03 23:38:05.955 +02:00 [DBG] Attempting to validate the bound parameter 'item' of type 'Controller_based_APIs.Models.TodoItemForCreationDTO' ...
+2025-03-03 23:38:05.975 +02:00 [DBG] Done attempting to validate the bound parameter 'item' of type 'Controller_based_APIs.Models.TodoItemForCreationDTO'.
+2025-03-03 23:38:05.980 +02:00 [DBG] The request has model state errors, returning an error response.
+2025-03-03 23:38:05.983 +02:00 [DBG] Request was short circuited at action filter 'Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter'.
+2025-03-03 23:38:05.986 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2025-03-03 23:38:05.996 +02:00 [DBG] No information found on request to perform content negotiation.
+2025-03-03 23:38:05.999 +02:00 [DBG] Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types '["application/problem+json","application/problem+xml","application/problem+json","application/problem+xml"]'.
+2025-03-03 23:38:06.005 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/problem+json' to write the response.
+2025-03-03 23:38:06.008 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-03-03 23:38:06.045 +02:00 [INF] Executed action Controller_based_APIs.Controllers.TodoItemsController.AddItem (TodoApi) in 171.4562ms
+2025-03-03 23:38:06.052 +02:00 [INF] Executed endpoint 'Controller_based_APIs.Controllers.TodoItemsController.AddItem (TodoApi)'
+2025-03-03 23:38:06.061 +02:00 [DBG] Connection id "0HNAQJELA7F0N" completed keep alive response.
+2025-03-03 23:38:06.065 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7002/api/todoitems - 400 null application/problem+json; charset=utf-8 257.5147ms
+2025-03-03 23:38:36.401 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7002/api/todoitems - application/json 155
+2025-03-03 23:38:36.405 +02:00 [DBG] 1 candidate(s) found for the request path '/api/todoitems'
+2025-03-03 23:38:36.409 +02:00 [DBG] Endpoint 'Controller_based_APIs.Controllers.TodoItemsController.AddItem (TodoApi)' with route pattern 'api/TodoItems' is valid for the request path '/api/todoitems'
+2025-03-03 23:38:36.412 +02:00 [DBG] Request matched endpoint 'Controller_based_APIs.Controllers.TodoItemsController.AddItem (TodoApi)'
+2025-03-03 23:38:36.419 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 23:38:36.421 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 23:38:36.423 +02:00 [INF] Executing endpoint 'Controller_based_APIs.Controllers.TodoItemsController.AddItem (TodoApi)'
+2025-03-03 23:38:36.426 +02:00 [INF] Route matched with {action = "AddItem", controller = "TodoItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Controller_based_APIs.Models.TodoItemDTO] AddItem(Controller_based_APIs.Models.TodoItemForCreationDTO) on controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi).
+2025-03-03 23:38:36.433 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-03-03 23:38:36.436 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-03-03 23:38:36.439 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-03-03 23:38:36.444 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-03-03 23:38:36.451 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-03-03 23:38:36.456 +02:00 [DBG] Executing controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 23:38:36.461 +02:00 [DBG] Executed controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 23:38:36.467 +02:00 [DBG] Attempting to bind parameter 'item' of type 'Controller_based_APIs.Models.TodoItemForCreationDTO' ...
+2025-03-03 23:38:36.473 +02:00 [DBG] Attempting to bind parameter 'item' of type 'Controller_based_APIs.Models.TodoItemForCreationDTO' using the name '' in request data ...
+2025-03-03 23:38:36.478 +02:00 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json'.
+2025-03-03 23:38:36.489 +02:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-03-03 23:38:36.495 +02:00 [DBG] Connection id "0HNAQJELA7F0N", Request id "0HNAQJELA7F0N:00000003": started reading request body.
+2025-03-03 23:38:36.502 +02:00 [DBG] Connection id "0HNAQJELA7F0N", Request id "0HNAQJELA7F0N:00000003": done reading request body.
+2025-03-03 23:38:37.273 +02:00 [DBG] JSON input formatter threw an exception: The JSON value could not be converted to System.Nullable`1[System.DateTime]. Path: $.DueDate | LineNumber: 3 | BytePositionInLine: 16.
+2025-03-03 23:38:37.276 +02:00 [DBG] Done attempting to bind parameter 'item' of type 'Controller_based_APIs.Models.TodoItemForCreationDTO'.
+2025-03-03 23:38:37.280 +02:00 [DBG] Done attempting to bind parameter 'item' of type 'Controller_based_APIs.Models.TodoItemForCreationDTO'.
+2025-03-03 23:38:37.284 +02:00 [DBG] Attempting to validate the bound parameter 'item' of type 'Controller_based_APIs.Models.TodoItemForCreationDTO' ...
+2025-03-03 23:38:37.289 +02:00 [DBG] Done attempting to validate the bound parameter 'item' of type 'Controller_based_APIs.Models.TodoItemForCreationDTO'.
+2025-03-03 23:38:37.293 +02:00 [DBG] The request has model state errors, returning an error response.
+2025-03-03 23:38:37.347 +02:00 [DBG] Request was short circuited at action filter 'Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter'.
+2025-03-03 23:38:37.350 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2025-03-03 23:38:37.366 +02:00 [DBG] No information found on request to perform content negotiation.
+2025-03-03 23:38:37.368 +02:00 [DBG] Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types '["application/problem+json","application/problem+xml","application/problem+json","application/problem+xml"]'.
+2025-03-03 23:38:37.383 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/problem+json' to write the response.
+2025-03-03 23:38:37.388 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-03-03 23:38:37.395 +02:00 [INF] Executed action Controller_based_APIs.Controllers.TodoItemsController.AddItem (TodoApi) in 939.3202ms
+2025-03-03 23:38:37.410 +02:00 [INF] Executed endpoint 'Controller_based_APIs.Controllers.TodoItemsController.AddItem (TodoApi)'
+2025-03-03 23:38:37.412 +02:00 [DBG] Connection id "0HNAQJELA7F0N" completed keep alive response.
+2025-03-03 23:38:37.415 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7002/api/todoitems - 400 null application/problem+json; charset=utf-8 1013.7607ms
+2025-03-03 23:38:47.286 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7002/api/todoitems - application/json 157
+2025-03-03 23:38:47.292 +02:00 [DBG] 1 candidate(s) found for the request path '/api/todoitems'
+2025-03-03 23:38:47.300 +02:00 [DBG] Endpoint 'Controller_based_APIs.Controllers.TodoItemsController.AddItem (TodoApi)' with route pattern 'api/TodoItems' is valid for the request path '/api/todoitems'
+2025-03-03 23:38:47.305 +02:00 [DBG] Request matched endpoint 'Controller_based_APIs.Controllers.TodoItemsController.AddItem (TodoApi)'
+2025-03-03 23:38:47.308 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 23:38:47.309 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-03 23:38:47.311 +02:00 [INF] Executing endpoint 'Controller_based_APIs.Controllers.TodoItemsController.AddItem (TodoApi)'
+2025-03-03 23:38:47.312 +02:00 [INF] Route matched with {action = "AddItem", controller = "TodoItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Controller_based_APIs.Models.TodoItemDTO] AddItem(Controller_based_APIs.Models.TodoItemForCreationDTO) on controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi).
+2025-03-03 23:38:47.319 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-03-03 23:38:47.322 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-03-03 23:38:47.326 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-03-03 23:38:47.336 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-03-03 23:38:47.340 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-03-03 23:38:47.345 +02:00 [DBG] Executing controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 23:38:47.351 +02:00 [DBG] Executed controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-03 23:38:47.355 +02:00 [DBG] Attempting to bind parameter 'item' of type 'Controller_based_APIs.Models.TodoItemForCreationDTO' ...
+2025-03-03 23:38:47.360 +02:00 [DBG] Attempting to bind parameter 'item' of type 'Controller_based_APIs.Models.TodoItemForCreationDTO' using the name '' in request data ...
+2025-03-03 23:38:47.364 +02:00 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json'.
+2025-03-03 23:38:47.367 +02:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-03-03 23:38:47.375 +02:00 [DBG] Connection id "0HNAQJELA7F0N", Request id "0HNAQJELA7F0N:00000004": started reading request body.
+2025-03-03 23:38:47.379 +02:00 [DBG] Connection id "0HNAQJELA7F0N", Request id "0HNAQJELA7F0N:00000004": done reading request body.
+2025-03-03 23:38:47.672 +02:00 [DBG] JSON input formatter threw an exception: The JSON value could not be converted to System.Nullable`1[System.DateTime]. Path: $.DueDate | LineNumber: 3 | BytePositionInLine: 17.
+2025-03-03 23:38:47.677 +02:00 [DBG] Done attempting to bind parameter 'item' of type 'Controller_based_APIs.Models.TodoItemForCreationDTO'.
+2025-03-03 23:38:47.682 +02:00 [DBG] Done attempting to bind parameter 'item' of type 'Controller_based_APIs.Models.TodoItemForCreationDTO'.
+2025-03-03 23:38:47.686 +02:00 [DBG] Attempting to validate the bound parameter 'item' of type 'Controller_based_APIs.Models.TodoItemForCreationDTO' ...
+2025-03-03 23:38:47.689 +02:00 [DBG] Done attempting to validate the bound parameter 'item' of type 'Controller_based_APIs.Models.TodoItemForCreationDTO'.
+2025-03-03 23:38:47.692 +02:00 [DBG] The request has model state errors, returning an error response.
+2025-03-03 23:38:47.693 +02:00 [DBG] Request was short circuited at action filter 'Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter'.
+2025-03-03 23:38:47.695 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2025-03-03 23:38:47.703 +02:00 [DBG] No information found on request to perform content negotiation.
+2025-03-03 23:38:47.705 +02:00 [DBG] Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types '["application/problem+json","application/problem+xml","application/problem+json","application/problem+xml"]'.
+2025-03-03 23:38:47.711 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/problem+json' to write the response.
+2025-03-03 23:38:47.717 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-03-03 23:38:47.722 +02:00 [INF] Executed action Controller_based_APIs.Controllers.TodoItemsController.AddItem (TodoApi) in 376.7635ms
+2025-03-03 23:38:47.724 +02:00 [INF] Executed endpoint 'Controller_based_APIs.Controllers.TodoItemsController.AddItem (TodoApi)'
+2025-03-03 23:38:47.727 +02:00 [DBG] Connection id "0HNAQJELA7F0N" completed keep alive response.
+2025-03-03 23:38:47.732 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7002/api/todoitems - 400 null application/problem+json; charset=utf-8 445.8293ms

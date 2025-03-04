@@ -25,7 +25,10 @@ namespace Controller_based_APIs.Controllers
             var todoItem = new TodoItemDTO
             {
                 Name = item.Name,
-                IsComplete = item.IsComplete
+                IsComplete = item.IsComplete,
+                StartDate = item.StartDate,
+                DueDate = item.DueDate,
+
             };
 
             todoRepo.Add(todoItem);
@@ -60,7 +63,9 @@ namespace Controller_based_APIs.Controllers
             {
                 Id = id,
                 Name = item.Name,
-                IsComplete = item.IsComplete
+                IsComplete = item.IsComplete,
+                StartDate = item.StartDate,
+                DueDate = item.DueDate,
             };
 
             todoRepo.Update(todoItem);
@@ -96,7 +101,9 @@ namespace Controller_based_APIs.Controllers
                     {
                         Id = id,
                         Name = todoItemToPatch.Name,
-                        IsComplete = todoItemToPatch.IsComplete
+                        IsComplete = todoItemToPatch.IsComplete,
+                        StartDate = todoItemToPatch.StartDate,
+                        DueDate = todoItemToPatch.DueDate,
                     };
 
                     todoRepo.Update(todoItem);

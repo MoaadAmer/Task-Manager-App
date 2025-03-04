@@ -8,5 +8,9 @@ namespace Controller_based_APIs.Models
         [MaxLength(40)]
         public string Name { get; set; } = string.Empty;
         public bool IsComplete { get; set; }
+        [Required]
+        public DateTime? StartDate { get; set; }
+        [Required]
+        public DateTime? DueDate { get; set; }
     }
 }
