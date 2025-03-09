@@ -6,6 +6,9 @@ using Serilog;
 using Controller_based_APIs.Data;
 using Controller_based_APIs.Models;
 using Controller_based_APIs.Services;
+using Controller_based_APIs.Entities;
+using Controller_based_APIs.DbContexts;
+using Microsoft.EntityFrameworkCore;
 
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
@@ -43,6 +46,10 @@ builder.Services.AddTransient<IMailService, LocalMailService>();
 #else
 builder.Services.AddTransient<IMailService, CloudMailService>();
 #endif
+
+builder.Services.AddDbContext<TodoItemsContext>(options =>
+options.UseSqlite(builder.Configuration["ConnectionStrings:TodoItemsDbConnectionString"]));
+
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())

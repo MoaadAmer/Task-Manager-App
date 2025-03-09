@@ -1,0 +1,55 @@
+2025-03-05 16:41:59.996 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-03-05 16:42:00.251 +02:00 [DBG] Hosting starting
+2025-03-05 16:42:01.124 +02:00 [INF] Now listening on: https://localhost:7002
+2025-03-05 16:42:01.137 +02:00 [INF] Now listening on: http://localhost:5118
+2025-03-05 16:42:01.213 +02:00 [DBG] Loaded hosting startup assembly TodoApi
+2025-03-05 16:42:01.216 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-03-05 16:42:01.218 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-03-05 16:42:01.220 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-03-05 16:42:01.366 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-05 16:42:01.380 +02:00 [INF] Hosting environment: Production
+2025-03-05 16:42:01.382 +02:00 [INF] Content root path: C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi
+2025-03-05 16:42:01.383 +02:00 [DBG] Hosting started
+2025-03-05 16:42:44.701 +02:00 [DBG] Connection id "0HNARUFUQ71ND" received FIN.
+2025-03-05 16:42:44.711 +02:00 [DBG] Connection id "0HNARUFUQ71ND" accepted.
+2025-03-05 16:42:44.716 +02:00 [DBG] Connection id "0HNARUFUQ71ND" started.
+2025-03-05 16:42:44.724 +02:00 [DBG] Connection id "0HNARUFUQ71NE" accepted.
+2025-03-05 16:42:44.726 +02:00 [DBG] Connection id "0HNARUFUQ71NE" started.
+2025-03-05 16:42:45.056 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-03-05 16:42:45.129 +02:00 [DBG] Connection 0HNARUFUQ71NE established using the following protocol: "Tls13"
+2025-03-05 16:42:45.143 +02:00 [DBG] Connection id "0HNARUFUQ71ND" stopped.
+2025-03-05 16:42:45.150 +02:00 [DBG] Connection id "0HNARUFUQ71ND" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-03-05 16:42:45.201 +02:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7002/api/todoitems/1 - null null
+2025-03-05 16:42:45.223 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-03-05 16:42:45.249 +02:00 [DBG] 1 candidate(s) found for the request path '/api/todoitems/1'
+2025-03-05 16:42:45.256 +02:00 [DBG] Endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)' with route pattern 'api/TodoItems/{id}' is valid for the request path '/api/todoitems/1'
+2025-03-05 16:42:45.263 +02:00 [DBG] Request matched endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-05 16:42:45.271 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-03-05 16:42:45.275 +02:00 [INF] Executing endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-05 16:42:45.373 +02:00 [INF] Route matched with {action = "DeleteItem", controller = "TodoItems"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteItem(Int32) on controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi).
+2025-03-05 16:42:45.382 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-03-05 16:42:45.386 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-03-05 16:42:45.389 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-03-05 16:42:45.393 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-03-05 16:42:45.395 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-03-05 16:42:45.399 +02:00 [DBG] Executing controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-05 16:42:45.403 +02:00 [DBG] Executed controller factory for controller Controller_based_APIs.Controllers.TodoItemsController (TodoApi)
+2025-03-05 16:42:45.421 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2025-03-05 16:42:45.426 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2025-03-05 16:42:45.430 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2025-03-05 16:42:45.432 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2025-03-05 16:42:45.433 +02:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2025-03-05 16:42:45.435 +02:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2025-03-05 16:42:45.440 +02:00 [INF] Sending email from prodFromAddress@gmail.com to prodToAddress@gmail.com
+Subject: Item deleted
+Message: Item with id 1 has been deleted
+2025-03-05 16:42:45.446 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-03-05 16:42:45.449 +02:00 [INF] Executed action Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi) in 50.1212ms
+2025-03-05 16:42:45.450 +02:00 [INF] Executed endpoint 'Controller_based_APIs.Controllers.TodoItemsController.DeleteItem (TodoApi)'
+2025-03-05 16:42:45.454 +02:00 [DBG] Connection id "0HNARUFUQ71NE" completed keep alive response.
+2025-03-05 16:42:45.457 +02:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7002/api/todoitems/1 - 204 null null 263.3108ms

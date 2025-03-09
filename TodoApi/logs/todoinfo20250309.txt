@@ -1,0 +1,123 @@
+2025-03-09 17:52:28.091 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2025-03-09 17:52:28.459 +02:00 [DBG] Entity Framework Core 8.0.13 initialized 'TodoItemsContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:8.0.13' with options: None
+2025-03-09 17:52:29.355 +02:00 [DBG] 'TodoItemsContext' disposed.
+2025-03-09 17:57:28.462 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2025-03-09 17:57:28.788 +02:00 [DBG] Entity Framework Core 8.0.13 initialized 'TodoItemsContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:8.0.13' with options: None
+2025-03-09 17:57:28.814 +02:00 [DBG] Creating DbConnection.
+2025-03-09 17:57:28.824 +02:00 [DBG] Created DbConnection. (7ms).
+2025-03-09 17:57:28.830 +02:00 [DBG] Migrating using database 'main' on server 'TodoItems.db'.
+2025-03-09 17:57:28.836 +02:00 [DBG] Creating DbConnection.
+2025-03-09 17:57:28.839 +02:00 [DBG] Created DbConnection. (3ms).
+2025-03-09 17:57:28.842 +02:00 [DBG] Opening connection to database 'main' on server 'TodoItems.db'.
+2025-03-09 17:57:28.850 +02:00 [DBG] An error occurred using the connection to database 'main' on server 'TodoItems.db'.
+2025-03-09 17:57:28.852 +02:00 [DBG] Disposing connection to database 'main' on server 'TodoItems.db'.
+2025-03-09 17:57:28.857 +02:00 [DBG] Disposed connection to database 'main' on server 'TodoItems.db' (2ms).
+2025-03-09 17:57:28.860 +02:00 [DBG] Creating DbConnection.
+2025-03-09 17:57:28.860 +02:00 [DBG] Created DbConnection. (0ms).
+2025-03-09 17:57:28.863 +02:00 [DBG] Opening connection to database 'main' on server 'TodoItems.db'.
+2025-03-09 17:57:28.864 +02:00 [DBG] An error occurred using the connection to database 'main' on server 'TodoItems.db'.
+2025-03-09 17:57:28.866 +02:00 [DBG] Disposing connection to database 'main' on server 'TodoItems.db'.
+2025-03-09 17:57:28.867 +02:00 [DBG] Disposed connection to database 'main' on server 'TodoItems.db' (1ms).
+2025-03-09 17:57:28.869 +02:00 [DBG] Opening connection to database 'main' on server 'TodoItems.db'.
+2025-03-09 17:57:28.876 +02:00 [DBG] Opened connection to database 'main' on server 'C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi\TodoItems.db'.
+2025-03-09 17:57:28.885 +02:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2025-03-09 17:57:28.890 +02:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (4ms).
+2025-03-09 17:57:28.893 +02:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (9ms).
+2025-03-09 17:57:28.899 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2025-03-09 17:57:28.928 +02:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2025-03-09 17:57:28.934 +02:00 [DBG] Closing connection to database 'main' on server 'C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi\TodoItems.db'.
+2025-03-09 17:57:28.937 +02:00 [DBG] Closed connection to database 'main' on server 'TodoItems.db' (2ms).
+2025-03-09 17:57:28.991 +02:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2025-03-09 17:57:28.995 +02:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (3ms).
+2025-03-09 17:57:28.996 +02:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (5ms).
+2025-03-09 17:57:28.997 +02:00 [DBG] Opening connection to database 'main' on server 'TodoItems.db'.
+2025-03-09 17:57:28.999 +02:00 [DBG] Opened connection to database 'main' on server 'C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi\TodoItems.db'.
+2025-03-09 17:57:29.000 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-03-09 17:57:29.014 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-03-09 17:57:29.019 +02:00 [DBG] Closing connection to database 'main' on server 'C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi\TodoItems.db'.
+2025-03-09 17:57:29.021 +02:00 [DBG] Closed connection to database 'main' on server 'TodoItems.db' (2ms).
+2025-03-09 17:57:29.024 +02:00 [DBG] Creating DbConnection.
+2025-03-09 17:57:29.025 +02:00 [DBG] Created DbConnection. (1ms).
+2025-03-09 17:57:29.026 +02:00 [DBG] Opening connection to database 'main' on server 'TodoItems.db'.
+2025-03-09 17:57:29.028 +02:00 [DBG] Opened connection to database 'main' on server 'C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi\TodoItems.db'.
+2025-03-09 17:57:29.031 +02:00 [DBG] Disposing connection to database 'main' on server 'TodoItems.db'.
+2025-03-09 17:57:29.033 +02:00 [DBG] Disposed connection to database 'main' on server 'TodoItems.db' (1ms).
+2025-03-09 17:57:29.038 +02:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2025-03-09 17:57:29.040 +02:00 [DBG] Created DbCommand for 'ExecuteScalar' (1ms).
+2025-03-09 17:57:29.042 +02:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (3ms).
+2025-03-09 17:57:29.044 +02:00 [DBG] Opening connection to database 'main' on server 'TodoItems.db'.
+2025-03-09 17:57:29.045 +02:00 [DBG] Opened connection to database 'main' on server 'C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi\TodoItems.db'.
+2025-03-09 17:57:29.048 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-03-09 17:57:29.052 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-03-09 17:57:29.056 +02:00 [DBG] Closing connection to database 'main' on server 'C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi\TodoItems.db'.
+2025-03-09 17:57:29.058 +02:00 [DBG] Closed connection to database 'main' on server 'TodoItems.db' (2ms).
+2025-03-09 17:57:29.061 +02:00 [DBG] Opening connection to database 'main' on server 'TodoItems.db'.
+2025-03-09 17:57:29.063 +02:00 [DBG] Opened connection to database 'main' on server 'C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi\TodoItems.db'.
+2025-03-09 17:57:29.064 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-03-09 17:57:29.065 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-03-09 17:57:29.068 +02:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2025-03-09 17:57:29.070 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-03-09 17:57:29.074 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-03-09 17:57:29.078 +02:00 [DBG] Closing data reader to 'main' on server 'C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi\TodoItems.db'.
+2025-03-09 17:57:29.081 +02:00 [DBG] A data reader for 'main' on server 'C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi\TodoItems.db' is being disposed after spending 3ms reading results.
+2025-03-09 17:57:29.085 +02:00 [DBG] Closing connection to database 'main' on server 'C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi\TodoItems.db'.
+2025-03-09 17:57:29.087 +02:00 [DBG] Closed connection to database 'main' on server 'TodoItems.db' (2ms).
+2025-03-09 17:57:29.097 +02:00 [INF] Applying migration '20250309155229_InitialCreate'.
+2025-03-09 17:57:29.111 +02:00 [DBG] Opening connection to database 'main' on server 'TodoItems.db'.
+2025-03-09 17:57:29.114 +02:00 [DBG] Opened connection to database 'main' on server 'C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi\TodoItems.db'.
+2025-03-09 17:57:29.121 +02:00 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2025-03-09 17:57:29.124 +02:00 [DBG] Began transaction with isolation level 'Serializable'.
+2025-03-09 17:57:29.127 +02:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2025-03-09 17:57:29.128 +02:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (1ms).
+2025-03-09 17:57:29.131 +02:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (3ms).
+2025-03-09 17:57:29.132 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "TodoItems" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_TodoItems" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "IsComplete" INTEGER NOT NULL,
+    "StartDate" TEXT NOT NULL,
+    "DueDate" TEXT NOT NULL
+);
+2025-03-09 17:57:29.135 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "TodoItems" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_TodoItems" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "IsComplete" INTEGER NOT NULL,
+    "StartDate" TEXT NOT NULL,
+    "DueDate" TEXT NOT NULL
+);
+2025-03-09 17:57:29.138 +02:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2025-03-09 17:57:29.139 +02:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (1ms).
+2025-03-09 17:57:29.141 +02:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (2ms).
+2025-03-09 17:57:29.142 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20250309155229_InitialCreate', '8.0.13');
+2025-03-09 17:57:29.147 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20250309155229_InitialCreate', '8.0.13');
+2025-03-09 17:57:29.151 +02:00 [DBG] Committing transaction.
+2025-03-09 17:57:29.155 +02:00 [DBG] Committed transaction.
+2025-03-09 17:57:29.157 +02:00 [DBG] Disposing transaction.
+2025-03-09 17:57:29.159 +02:00 [DBG] Closing connection to database 'main' on server 'C:\Users\moaada\Documents\Code\Career Transition\Todo-App\TodoApi\TodoItems.db'.
+2025-03-09 17:57:29.161 +02:00 [DBG] Closed connection to database 'main' on server 'TodoItems.db' (1ms).
+2025-03-09 17:57:29.165 +02:00 [DBG] 'TodoItemsContext' disposed.
+2025-03-09 17:57:29.167 +02:00 [DBG] Disposing connection to database 'main' on server 'TodoItems.db'.
+2025-03-09 17:57:29.169 +02:00 [DBG] Disposed connection to database 'main' on server 'TodoItems.db' (1ms).
