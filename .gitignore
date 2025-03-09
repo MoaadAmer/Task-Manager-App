@@ -80,3 +80,4 @@ Introduction to APIs/obj/Debug/net8.0/Introduction to APIs.csproj.FileListAbsolu
 /TodoApi/TodoItems.db-wal
 /TodoApi/logs/*
 /TodoApi/Migrations/20250309212413_AddData.Designer.cs
+/TodoApi/TodoApi.sln
