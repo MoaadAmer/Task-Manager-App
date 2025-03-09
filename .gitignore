@@ -78,9 +78,4 @@ Introduction to APIs/obj/Debug/net8.0/Introduction to APIs.csproj.FileListAbsolu
 /TodoApi/Migrations/20250309155229_InitialCreate.Designer.cs
 /TodoApi/TodoItems.db-shm
 /TodoApi/TodoItems.db-wal
-/TodoApi/DbContexts/TodoItemsContext.cs
-/TodoApi/logs/todoinfo20250228.txt
-/TodoApi/logs/todoinfo20250303.txt
-/TodoApi/logs/todoinfo20250304.txt
-/TodoApi/logs/todoinfo20250305.txt
-/TodoApi/logs/todoinfo20250309.txt
+/TodoApi/logs/*
