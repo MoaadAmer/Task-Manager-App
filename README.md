@@ -2,5 +2,5 @@ Building a Todo app.
 
 Stack :
 * C# asp net web api
-* Angular
+* HTML,CSS,Javascript
 * SQL Server
