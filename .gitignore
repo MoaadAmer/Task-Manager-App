@@ -81,3 +81,7 @@ Introduction to APIs/obj/Debug/net8.0/Introduction to APIs.csproj.FileListAbsolu
 /TodoApi/logs/*
 /TodoApi/Migrations/20250309212413_AddData.Designer.cs
 /TodoApi/TodoApi.sln
+/TaskManagerAPI/.vs
+/TaskManagerAPI/obj
+/TaskManagerAPI/bin/Debug/net9.0
+/TaskManagerAPI/bin/Debug/net10.0
