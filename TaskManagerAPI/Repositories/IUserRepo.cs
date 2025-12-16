@@ -10,5 +10,5 @@ public interface IUserRepo
     Task<User?> GetById(Guid id);
 
     Task<List<User>> GetAll();
-
+    Task Update(Guid id, UpdateUserDTO updateUserDTO);
 }

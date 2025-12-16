@@ -27,8 +27,17 @@ namespace TaskManagerAPI.Repositories
 
         public Task<User?> GetById(Guid id)
         {
-            User user = _users.Find(user => user.Id == id);
+            User? user = _users.Find(user => user.Id == id);
             return Task.FromResult(user);
+        }
+
+        public async Task Update(Guid id, UpdateUserDTO updateUserDTO)
+        {
+            User? user = await GetById(id);
+            if (user != null)
+            {
+                user.FullName = updateUserDTO.FullName;
+            }
         }
     }
 }

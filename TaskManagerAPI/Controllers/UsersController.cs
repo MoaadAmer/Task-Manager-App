@@ -20,31 +20,49 @@ namespace TaskManagerAPI.Controllers
         public async Task<ActionResult<GetUserDTO>> Create(CreateUserDTO user)
         {
             User newUser = await _userRepo.Create(user);
-            return CreatedAtAction(nameof(GetById), new { Id = newUser.Id }, new GetUserDTO()
-            {
-                Id = newUser.Id,
-                Email = newUser.Email,
-                FullName = newUser.FullName
-
-            });
+            return CreatedAtAction(nameof(GetById), new { Id = newUser.Id }, UserToGetUserDTO(newUser));
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<GetUserDTO>> GetById(Guid id)
         {
-            User user = await _userRepo.GetById(id);
+            User? user = await _userRepo.GetById(id);
             if (user == null)
             {
                 return NotFound();
             }
-            return Ok(user);
+            return Ok(UserToGetUserDTO(user));
         }
 
         [HttpGet]
-        public async Task<ActionResult<GetUserDTO>> GetAll()
+        public async Task<ActionResult<IEnumerable<GetUserDTO>>> GetAll()
         {
-            List<User> users = await _userRepo.GetAll();
+            IEnumerable<GetUserDTO> users = (await _userRepo.GetAll()).Select(UserToGetUserDTO);
             return Ok(users);
         }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult<GetUserDTO>> Update(Guid id, UpdateUserDTO updateUserDTO)
+        {
+            if (_userRepo.GetById(id) != null)
+            {
+                await _userRepo.Update(id, updateUserDTO);
+
+                return NoContent();
+            }
+            return NotFound();
+        }
+
+
+        private GetUserDTO UserToGetUserDTO(User newUser)
+        {
+            return new GetUserDTO()
+            {
+                Id = newUser.Id,
+                Email = newUser.Email,
+                FullName = newUser.FullName
+            };
+        }
+
     }
 }
