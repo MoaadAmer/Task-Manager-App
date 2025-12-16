@@ -42,11 +42,24 @@ namespace TaskManagerAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult<GetUserDTO>> Update(Guid id, UpdateUserDTO updateUserDTO)
+        public async Task<IActionResult> Update(Guid id, UpdateUserDTO updateUserDTO)
         {
-            if (_userRepo.GetById(id) != null)
+            if (await _userRepo.GetById(id) != null)
             {
                 await _userRepo.Update(id, updateUserDTO);
+
+                return NoContent();
+            }
+            return NotFound();
+        }
+
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            if (await _userRepo.GetById(id) != null)
+            {
+                await _userRepo.Delete(id);
 
                 return NoContent();
             }

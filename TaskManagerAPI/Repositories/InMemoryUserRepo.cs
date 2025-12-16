@@ -39,5 +39,15 @@ namespace TaskManagerAPI.Repositories
                 user.FullName = updateUserDTO.FullName;
             }
         }
+
+        public async Task Delete(Guid id)
+        {
+            int index = _users.FindIndex(user => user.Id == id);
+            if (index >= 0)
+            {
+                _users.RemoveAt(index);
+            }
+            await Task.Delay(1);
+        }
     }
 }
