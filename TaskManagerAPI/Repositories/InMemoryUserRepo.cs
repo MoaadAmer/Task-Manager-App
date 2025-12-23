@@ -1,21 +1,29 @@
 ﻿
-using TaskManagerAPI.Models;
+using Microsoft.AspNetCore.Identity;
 using TaskManagerAPI.Entites;
+using TaskManagerAPI.Models;
 
 namespace TaskManagerAPI.Repositories
 {
     public class InMemoryUserRepo : IUserRepo
     {
+        public InMemoryUserRepo(IPasswordHasher<User> passwordHasher)
+        {
+            _passwordHasher = passwordHasher;
+        }
+
         private List<User> _users = [];
+        private readonly IPasswordHasher<User> _passwordHasher;
+
         public Task<User> Create(CreateUserDTO user)
         {
             var newUser = new User()
             {
                 Id = Guid.NewGuid(),
                 FullName = user.FullName,
-                Email = user.Email,
-                PasswordHash = user.Password
+                Email = user.Email
             };
+            newUser.PasswordHash = _passwordHasher.HashPassword(newUser, user.Password);
             _users.Add(newUser);
             return Task.FromResult(newUser);
         }
@@ -38,6 +46,16 @@ namespace TaskManagerAPI.Repositories
             {
                 user.FullName = updateUserDTO.FullName;
             }
+        }
+
+        public async Task Delete(Guid id)
+        {
+            int index = _users.FindIndex(user => user.Id == id);
+            if (index >= 0)
+            {
+                _users.RemoveAt(index);
+            }
+            await Task.Delay(1);
         }
     }
 }

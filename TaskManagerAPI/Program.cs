@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Identity;
+using TaskManagerAPI.Entites;
 using TaskManagerAPI.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+builder.Services.AddSingleton<IPasswordHasher<User>, PasswordHasher<User>>();
+
 
 builder.Services.AddSingleton<IUserRepo, InMemoryUserRepo>();
 
