@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using TaskManagerAPI.Entites;
 using TaskManagerAPI.Models;
 using TaskManagerAPI.Repositories;
@@ -10,10 +11,12 @@ namespace TaskManagerAPI.Controllers
     public class UsersController : ControllerBase
     {
         private readonly IUserRepo _userRepo;
+        private readonly IPasswordHasher<User> _passwordHasher;
 
-        public UsersController(IUserRepo userRepo)
+        public UsersController(IUserRepo userRepo, IPasswordHasher<User> passwordHasher)
         {
             _userRepo = userRepo;
+            _passwordHasher = passwordHasher;
         }
 
         [HttpPost]
@@ -66,6 +69,17 @@ namespace TaskManagerAPI.Controllers
             return NotFound();
         }
 
+        [HttpPost("login")]
+        public async Task<IActionResult> Login(LoginDTO loginDTO)
+        {
+            User? user = await _userRepo.GetByEmail(loginDTO.Email);
+            if (user != null && _passwordHasher.VerifyHashedPassword(user, user.PasswordHash, loginDTO.Password) == PasswordVerificationResult.Success)
+            {
+                return Ok();
+            }
+            return Unauthorized();
+
+        }
 
         private GetUserDTO UserToGetUserDTO(User newUser)
         {

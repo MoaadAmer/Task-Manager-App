@@ -57,5 +57,10 @@ namespace TaskManagerAPI.Repositories
             }
             await Task.Delay(1);
         }
+
+        public Task<User?> GetByEmail(string email)
+        {
+            return Task.FromResult(_users.Find(user => user.Email == email));
+        }
     }
 }
