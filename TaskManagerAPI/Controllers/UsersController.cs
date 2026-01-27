@@ -66,7 +66,6 @@ namespace TaskManagerAPI.Controllers
             return NotFound();
         }
 
-
         private GetUserDTO UserToGetUserDTO(User newUser)
         {
             return new GetUserDTO()
