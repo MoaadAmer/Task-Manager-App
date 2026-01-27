@@ -7,13 +7,21 @@ namespace TaskManagerAPI.Repositories
 {
     public class InMemoryUserRepo : IUserRepo
     {
+        private List<User> _users = [];
+
+        private readonly IPasswordHasher<User> _passwordHasher;
         public InMemoryUserRepo(IPasswordHasher<User> passwordHasher)
         {
             _passwordHasher = passwordHasher;
+            var adminUser = new User()
+            {
+                Email = "Moaad@gmail.com",
+                FullName = "Moaad amer",
+                Id = new Guid()
+            };
+            adminUser.PasswordHash = _passwordHasher.HashPassword(adminUser, "123456");
+            _users.Add(adminUser);
         }
-
-        private List<User> _users = [];
-        private readonly IPasswordHasher<User> _passwordHasher;
 
         public Task<User> Create(CreateUserDTO user)
         {
