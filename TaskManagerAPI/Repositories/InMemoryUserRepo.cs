@@ -7,20 +7,39 @@ namespace TaskManagerAPI.Repositories
 {
     public class InMemoryUserRepo : IUserRepo
     {
-        private List<User> _users = [];
+        private List<User> _users;
 
         private readonly IPasswordHasher<User> _passwordHasher;
         public InMemoryUserRepo(IPasswordHasher<User> passwordHasher)
         {
             _passwordHasher = passwordHasher;
-            var adminUser = new User()
+
+            _users = new List<User>()
             {
-                Email = "Moaad@gmail.com",
-                FullName = "Moaad amer",
-                Id = new Guid()
+                new User()
+                {
+                    Id=Guid.NewGuid(),
+                    FullName="Moaad Amer",
+                    Email="moaad@gmail.com",
+                },
+                new User()
+                {
+                    Id=Guid.NewGuid(),
+                    FullName="yaniv",
+                    Email="yaniv@gmail.com"
+                },
+                new User()
+                {
+                    Id=Guid.NewGuid(),
+                    FullName="oren",
+                    Email="oren@gmail.com"
+                },
             };
-            adminUser.PasswordHash = _passwordHasher.HashPassword(adminUser, "123456");
-            _users.Add(adminUser);
+            foreach (var user in _users)
+            {
+                user.PasswordHash = _passwordHasher.HashPassword(user, "123456");
+            }
+
         }
 
         public Task<User> Create(CreateUserDTO user)

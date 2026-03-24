@@ -4,6 +4,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using TaskManagerAPI.Entites;
 using TaskManagerAPI.Repositories;
+using TaskManagerAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,14 +14,15 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 builder.Services.AddSingleton<IPasswordHasher<User>, PasswordHasher<User>>();
-
-
 builder.Services.AddSingleton<IUserRepo, InMemoryUserRepo>();
 
+builder.Services.AddScoped<ITokenService, TokenService>();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 .AddJwtBearer(jwtOptions =>
 {
+    var config = builder.Configuration.GetSection("Jwt");
+
 
     jwtOptions.TokenValidationParameters = new TokenValidationParameters
     {
@@ -28,11 +30,10 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         ValidateAudience = true,
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
-        ValidIssuer = "yourIssuer",
-        ValidAudience = "yourAudience",
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("yourSecretKey12345"))
+        ValidIssuer = config["Issuer"],
+        ValidAudience = config["Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["Key"]))
     };
-
 });
 
 builder.Services.AddAuthorization();
