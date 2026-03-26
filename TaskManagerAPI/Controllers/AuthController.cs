@@ -1,9 +1,8 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using TaskManagerAPI.Entites;
+﻿using Microsoft.AspNetCore.Mvc;
+using TaskManagerAPI.Entities;
 using TaskManagerAPI.Models;
 using TaskManagerAPI.Repositories;
-using TaskManagerAPI.Services;
+using TaskManagerAPI.Services.Interfaces;
 
 namespace TaskManagerAPI.Controllers
 {
@@ -12,34 +11,37 @@ namespace TaskManagerAPI.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IUserRepo _userRepo;
-        private readonly IPasswordHasher<User> _passwordHasher;
         private readonly ITokenService _tokenService;
+        IPasswordService _passwordService;
         public AuthController(IUserRepo userRepo,
-            IPasswordHasher<User> passwordHasher,
-            ITokenService tokenService)
+            ITokenService tokenService,
+            IPasswordService passwordService)
         {
             _userRepo = userRepo;
-            _passwordHasher = passwordHasher;
             _tokenService = tokenService;
+            _passwordService = passwordService;
         }
 
-        //[HttpPost("Register")]
-        //public async Task<IActionResult> Register(LoginDTO loginDTO)
-        //{
-        //    User? user = await _userRepo.GetByEmail(loginDTO.Email);
-        //    if (user != null)
-        //    {
-        //        return Ok(new { Token = token });
-        //    }
-        //    return Unauthorized();
+        [HttpPost("Register")]
+        public async Task<IActionResult> Register(CreateUserDTO createUserDTO)
+        {
+            User? user = await _userRepo.GetByEmail(createUserDTO.Email);
+            if (user != null)
+            {
+                return BadRequest("Email is already registered");
+            }
+            user = new User { Id = Guid.NewGuid(), Email = createUserDTO.Email, FullName = createUserDTO.FullName };
+            user.PasswordHash = _passwordService.HashPassword(user, createUserDTO.Password);
 
-        //} 
+            await _userRepo.Insert(user);
+            return Ok();
+        }
 
         [HttpPost("login")]
         public async Task<IActionResult> Login(LoginDTO loginDTO)
         {
             User? user = await _userRepo.GetByEmail(loginDTO.Email);
-            if (user != null && _passwordHasher.VerifyHashedPassword(user, user.PasswordHash, loginDTO.Password) == PasswordVerificationResult.Success)
+            if (user != null && _passwordService.VerifyPassword(user, loginDTO.Password))
             {
                 string token = _tokenService.CreateToken(user);
                 return Ok(new { token });

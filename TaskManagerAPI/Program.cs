@@ -2,9 +2,10 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using TaskManagerAPI.Entites;
+using TaskManagerAPI.Entities;
 using TaskManagerAPI.Repositories;
 using TaskManagerAPI.Services;
+using TaskManagerAPI.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,10 +14,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
-builder.Services.AddSingleton<IPasswordHasher<User>, PasswordHasher<User>>();
+builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
+builder.Services.AddScoped<IPasswordService, PasswordService>();
 builder.Services.AddSingleton<IUserRepo, InMemoryUserRepo>();
-
 builder.Services.AddScoped<ITokenService, TokenService>();
+
+
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 .AddJwtBearer(jwtOptions =>

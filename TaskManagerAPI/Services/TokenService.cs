@@ -1,9 +1,10 @@
 ﻿using System.Security.Claims;
-using TaskManagerAPI.Entites;
+using TaskManagerAPI.Entities;
 
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
+using TaskManagerAPI.Services.Interfaces;
 
 
 namespace TaskManagerAPI.Services

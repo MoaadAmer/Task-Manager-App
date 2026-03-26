@@ -2,12 +2,12 @@
 namespace TaskManagerAPI.Repositories;
 
 using System.Collections.Generic;
-using TaskManagerAPI.Entites;
+using TaskManagerAPI.Entities;
 using TaskManagerAPI.Models;
 
 public interface IUserRepo
 {
-    Task<User> Create(CreateUserDTO user);
+    Task Insert(User user);
     Task<User?> GetById(Guid id);
     Task<User?> GetByEmail(string email);
 

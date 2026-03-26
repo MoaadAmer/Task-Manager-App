@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using TaskManagerAPI.Entites;
+using TaskManagerAPI.Entities;
 using TaskManagerAPI.Models;
 using TaskManagerAPI.Repositories;
+using TaskManagerAPI.Services.Interfaces;
 
 namespace TaskManagerAPI.Controllers
 {
@@ -10,17 +11,22 @@ namespace TaskManagerAPI.Controllers
     public class UsersController : ControllerBase
     {
         private readonly IUserRepo _userRepo;
+        private readonly IPasswordService _passwordService;
 
-        public UsersController(IUserRepo userRepo)
+        public UsersController(IUserRepo userRepo, IPasswordService passwordService)
         {
             _userRepo = userRepo;
+            this._passwordService = passwordService;
         }
 
         [HttpPost]
-        public async Task<ActionResult<GetUserDTO>> Create(CreateUserDTO user)
+        public async Task<ActionResult<GetUserDTO>> Create(CreateUserDTO createUserDTO)
         {
-            User newUser = await _userRepo.Create(user);
-            return CreatedAtAction(nameof(GetById), new { Id = newUser.Id }, UserToGetUserDTO(newUser));
+            User user = new User { Id = Guid.NewGuid(), Email = createUserDTO.Email, FullName = createUserDTO.FullName };
+            user.PasswordHash = _passwordService.HashPassword(user, createUserDTO.Password);
+
+            await _userRepo.Insert(user);
+            return CreatedAtAction(nameof(GetById), new { user.Id }, UserToGetUserDTO(user));
         }
 
         [HttpGet("{id}")]

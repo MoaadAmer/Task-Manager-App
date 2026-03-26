@@ -1,6 +1,6 @@
-﻿using TaskManagerAPI.Entites;
+﻿using TaskManagerAPI.Entities;
 
-namespace TaskManagerAPI.Services
+namespace TaskManagerAPI.Services.Interfaces
 {
     public interface ITokenService
     {
