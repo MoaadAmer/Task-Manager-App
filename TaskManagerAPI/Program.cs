@@ -18,6 +18,7 @@ builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 builder.Services.AddScoped<IPasswordService, PasswordService>();
 builder.Services.AddSingleton<IUserRepo, InMemoryUserRepo>();
 builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddSingleton<IRefreshTokenRepo, InMemoryRefreshTokenRepo>();
 
 
 

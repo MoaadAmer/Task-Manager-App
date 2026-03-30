@@ -12,13 +12,16 @@ namespace TaskManagerAPI.Controllers
     {
         private readonly IUserRepo _userRepo;
         private readonly ITokenService _tokenService;
+        private readonly IRefreshTokenRepo _refreshTokenRepo;
         IPasswordService _passwordService;
         public AuthController(IUserRepo userRepo,
             ITokenService tokenService,
+            IRefreshTokenRepo refreshTokenRepo,
             IPasswordService passwordService)
         {
             _userRepo = userRepo;
             _tokenService = tokenService;
+            _refreshTokenRepo = refreshTokenRepo;
             _passwordService = passwordService;
         }
 
@@ -43,8 +46,22 @@ namespace TaskManagerAPI.Controllers
             User? user = await _userRepo.GetByEmail(loginDTO.Email);
             if (user != null && _passwordService.VerifyPassword(user, loginDTO.Password))
             {
-                string token = _tokenService.CreateToken(user);
-                return Ok(new { token });
+                string accessToken = _tokenService.CreateAccessToken(user);
+                string refreshToken = _tokenService.CreateRefreshToken();
+
+
+
+                await _refreshTokenRepo.SaveToken(
+                    new RefreshToken()
+                    {
+                        Token = refreshToken,
+                        UserId = user.Id,
+                        ExpiresAt = DateTime.UtcNow.AddDays(7),
+                        Revoked = false,
+                        ReplacedByToken = null
+                    });
+
+                return Ok(new { accessToken, refreshToken });
             }
             return Unauthorized();
         }
