@@ -1,4 +1,4 @@
-﻿namespace TaskManagerAPI.Models
+﻿namespace TaskManagerAPI.Entities
 {
     public class RefreshToken
     {

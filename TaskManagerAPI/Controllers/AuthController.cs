@@ -25,7 +25,7 @@ namespace TaskManagerAPI.Controllers
             _passwordService = passwordService;
         }
 
-        [HttpPost("Register")]
+        [HttpPost("register")]
         public async Task<IActionResult> Register(CreateUserDTO createUserDTO)
         {
             User? user = await _userRepo.GetByEmail(createUserDTO.Email);
@@ -64,6 +64,53 @@ namespace TaskManagerAPI.Controllers
                 return Ok(new { accessToken, refreshToken });
             }
             return Unauthorized();
+        }
+        [HttpPost("refresh")]
+        public async Task<IActionResult> RefreshToken(RefreshTokenRequest refreshTokenRequest)
+        {
+            string refreshToken = refreshTokenRequest.RefreshToken;
+            // 1. Get stored refresh token
+            RefreshToken? storedToken = await _refreshTokenRepo.Get(refreshToken);
+            if (storedToken == null)
+                return Unauthorized("Invalid refresh token");
+
+            // 2. Check expiration
+            if (storedToken.ExpiresAt < DateTime.UtcNow)
+                return Unauthorized("Refresh token expired");
+
+            // 3. Check if revoked
+            if (storedToken.Revoked)
+                return Unauthorized("Refresh token revoked");
+
+            // 4. Get associated user
+            var user = await _userRepo.GetById(storedToken.UserId);
+            if (user == null)
+                return Unauthorized("User no longer exists");
+
+            // 5. Rotate refresh token (Security requirement)
+            string newRefreshToken = _tokenService.CreateRefreshToken();
+
+            // Save new refresh token
+            await _refreshTokenRepo.SaveToken(new RefreshToken
+            {
+                Token = newRefreshToken,
+                UserId = user.Id,
+                ExpiresAt = DateTime.UtcNow.AddDays(7),
+                Revoked = false
+            });
+
+            // Revoke old
+            await _refreshTokenRepo.Revoke(refreshToken, newRefreshToken);
+
+            // 6. Generate new Access token
+            string newAccessToken = _tokenService.CreateAccessToken(user);
+
+            // 7. Return new tokens to client
+            return Ok(new
+            {
+                accessToken = newAccessToken,
+                refreshToken = newRefreshToken
+            });
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using TaskManagerAPI.Models;
+﻿using TaskManagerAPI.Entities;
 
 namespace TaskManagerAPI.Repositories
 {
