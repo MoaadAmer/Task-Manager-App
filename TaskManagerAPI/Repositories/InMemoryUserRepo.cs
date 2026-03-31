@@ -1,5 +1,5 @@
 ﻿using TaskManagerAPI.Entities;
-using TaskManagerAPI.Models;
+using TaskManagerAPI.Models.User;
 
 namespace TaskManagerAPI.Repositories
 {
@@ -24,7 +24,7 @@ namespace TaskManagerAPI.Repositories
             return Task.FromResult(user);
         }
 
-        public async Task Update(Guid id, UpdateUserDTO updateUserDTO)
+        public async Task Update(Guid id, UpdateUserRequest updateUserDTO)
         {
             User? user = await GetById(id);
             if (user != null)

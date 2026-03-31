@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TaskManagerAPI.Entities;
-using TaskManagerAPI.Models;
+using TaskManagerAPI.Models.Auth;
 using TaskManagerAPI.Repositories;
 using TaskManagerAPI.Services.Interfaces;
 
@@ -26,7 +26,7 @@ namespace TaskManagerAPI.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<IActionResult> Register(CreateUserDTO createUserDTO)
+        public async Task<IActionResult> Register(RegisterRequest createUserDTO)
         {
             User? user = await _userRepo.GetByEmail(createUserDTO.Email);
             if (user != null)
@@ -41,10 +41,10 @@ namespace TaskManagerAPI.Controllers
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login(LoginDTO loginDTO)
+        public async Task<IActionResult> Login(LoginRequest loginRequest)
         {
-            User? user = await _userRepo.GetByEmail(loginDTO.Email);
-            if (user != null && _passwordService.VerifyPassword(user, loginDTO.Password))
+            User? user = await _userRepo.GetByEmail(loginRequest.Email);
+            if (user != null && _passwordService.VerifyPassword(user, loginRequest.Password))
             {
                 string accessToken = _tokenService.CreateAccessToken(user);
                 string refreshToken = _tokenService.CreateRefreshToken();

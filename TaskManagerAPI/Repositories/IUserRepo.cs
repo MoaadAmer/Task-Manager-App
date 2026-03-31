@@ -3,7 +3,7 @@ namespace TaskManagerAPI.Repositories;
 
 using System.Collections.Generic;
 using TaskManagerAPI.Entities;
-using TaskManagerAPI.Models;
+using TaskManagerAPI.Models.User;
 
 public interface IUserRepo
 {
@@ -12,6 +12,6 @@ public interface IUserRepo
     Task<User?> GetByEmail(string email);
 
     Task<List<User>> GetAll();
-    Task Update(Guid id, UpdateUserDTO updateUserDTO);
+    Task Update(Guid id, UpdateUserRequest updateUserDTO);
     Task Delete(Guid id);
 }
