@@ -65,6 +65,28 @@ namespace TaskManagerAPI.Controllers
             }
             return Unauthorized();
         }
+
+        [HttpPost("logout")]
+        public async Task<IActionResult> Logout(RefreshTokenRequest refreshTokenRequest)
+        {
+            string refreshToken = refreshTokenRequest.RefreshToken;
+            RefreshToken? storedToken = await _refreshTokenRepo.Get(refreshToken);
+            if (storedToken == null)
+            {
+                return Unauthorized("Invalid refresh token");
+            }
+
+            if (storedToken.Revoked)
+            {
+                return Unauthorized("Refresh token revoked");
+            }
+
+            await _refreshTokenRepo.Revoke(refreshToken);
+
+            return Ok(new { message = "Logged out successfully." });
+
+        }
+
         [HttpPost("refresh")]
         public async Task<IActionResult> RefreshToken(RefreshTokenRequest refreshTokenRequest)
         {
