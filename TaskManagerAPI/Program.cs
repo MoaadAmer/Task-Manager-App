@@ -7,19 +7,20 @@ using TaskManagerAPI.Repositories;
 using TaskManagerAPI.Services;
 using TaskManagerAPI.Services.Interfaces;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
 builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 builder.Services.AddScoped<IPasswordService, PasswordService>();
 builder.Services.AddSingleton<IUserRepo, InMemoryUserRepo>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddSingleton<IRefreshTokenRepo, InMemoryRefreshTokenRepo>();
 
+
+builder.Services.AddOpenApi();
 
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -48,6 +49,10 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint("/openapi/v1.json", "v1");
+    });
 }
 
 app.UseHttpsRedirection();
