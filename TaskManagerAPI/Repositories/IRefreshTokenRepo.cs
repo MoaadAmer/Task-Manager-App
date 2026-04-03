@@ -6,6 +6,6 @@ namespace TaskManagerAPI.Repositories
     {
         Task SaveToken(RefreshToken token);
         Task<RefreshToken?> Get(string token);
-        Task Revoke(string token, string? replacedByToken = null);
+        Task Update(RefreshToken token);
     }
 }

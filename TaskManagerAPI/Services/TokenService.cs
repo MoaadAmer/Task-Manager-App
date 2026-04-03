@@ -27,7 +27,7 @@ namespace TaskManagerAPI.Services
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-            var expires = DateTime.Now.AddMinutes(int.Parse(_config["Jwt:ExpiresMinutes"]));
+            var expires = DateTime.Now.AddMinutes(int.Parse(_config["Jwt:AccessTokenExpirationMinutes"]));
 
             var token = new JwtSecurityToken(
                 issuer: _config["Jwt:issuer"],

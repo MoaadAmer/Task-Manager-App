@@ -17,15 +17,8 @@ namespace TaskManagerAPI.Repositories
             return Task.FromResult(_tokens.FirstOrDefault(t => t.Token == token));
         }
 
-        public Task Revoke(string token, string? replacedByToken = null)
+        public Task Update(RefreshToken token)
         {
-            var existing = _tokens.FirstOrDefault(t => t.Token == token);
-            if (existing != null)
-            {
-                existing.Revoked = true;
-                existing.ReplacedByToken = replacedByToken;
-            }
-
             return Task.CompletedTask;
         }
     }

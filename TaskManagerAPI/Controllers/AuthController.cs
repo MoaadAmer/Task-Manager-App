@@ -14,15 +14,20 @@ namespace TaskManagerAPI.Controllers
         private readonly ITokenService _tokenService;
         private readonly IRefreshTokenRepo _refreshTokenRepo;
         IPasswordService _passwordService;
+
+        private readonly int _refreshTokenExpirationDays;
+
         public AuthController(IUserRepo userRepo,
             ITokenService tokenService,
             IRefreshTokenRepo refreshTokenRepo,
-            IPasswordService passwordService)
+            IPasswordService passwordService,
+            IConfiguration configuration)
         {
             _userRepo = userRepo;
             _tokenService = tokenService;
             _refreshTokenRepo = refreshTokenRepo;
             _passwordService = passwordService;
+            _refreshTokenExpirationDays = int.Parse(configuration["Jwt:RefreshTokenExpirationDays"]);
         }
 
         [HttpPost("register")]
@@ -37,7 +42,18 @@ namespace TaskManagerAPI.Controllers
             user.PasswordHash = _passwordService.HashPassword(user, createUserDTO.Password);
 
             await _userRepo.Insert(user);
-            return Ok();
+
+            string accessToken = _tokenService.CreateAccessToken(user);
+            string refreshToken = _tokenService.CreateRefreshToken();
+            await _refreshTokenRepo.SaveToken(
+                new RefreshToken(refreshToken, user.Id, _refreshTokenExpirationDays)
+                );
+
+            return Ok(new
+            {
+                accessToken,
+                refreshToken
+            });
         }
 
         [HttpPost("login")]
@@ -49,17 +65,11 @@ namespace TaskManagerAPI.Controllers
                 string accessToken = _tokenService.CreateAccessToken(user);
                 string refreshToken = _tokenService.CreateRefreshToken();
 
-
-
-                await _refreshTokenRepo.SaveToken(
-                    new RefreshToken()
-                    {
-                        Token = refreshToken,
-                        UserId = user.Id,
-                        ExpiresAt = DateTime.UtcNow.AddDays(7),
-                        Revoked = false,
-                        ReplacedByToken = null
-                    });
+                await
+                    _refreshTokenRepo.
+                    SaveToken(
+                    new RefreshToken(refreshToken, user.Id, _refreshTokenExpirationDays)
+                    );
 
                 return Ok(new { accessToken, refreshToken });
             }
@@ -69,19 +79,18 @@ namespace TaskManagerAPI.Controllers
         [HttpPost("logout")]
         public async Task<IActionResult> Logout(RefreshTokenRequest refreshTokenRequest)
         {
-            string refreshToken = refreshTokenRequest.RefreshToken;
+            string refreshToken = refreshTokenRequest.Token;
             RefreshToken? storedToken = await _refreshTokenRepo.Get(refreshToken);
             if (storedToken == null)
             {
                 return Unauthorized("Invalid refresh token");
             }
-
             if (storedToken.Revoked)
             {
                 return Unauthorized("Refresh token revoked");
             }
-
-            await _refreshTokenRepo.Revoke(refreshToken);
+            storedToken.Revoke();
+            await _refreshTokenRepo.Update(storedToken);
 
             return Ok(new { message = "Logged out successfully." });
 
@@ -90,49 +99,36 @@ namespace TaskManagerAPI.Controllers
         [HttpPost("refresh")]
         public async Task<IActionResult> RefreshToken(RefreshTokenRequest refreshTokenRequest)
         {
-            string refreshToken = refreshTokenRequest.RefreshToken;
-            // 1. Get stored refresh token
-            RefreshToken? storedToken = await _refreshTokenRepo.Get(refreshToken);
+            RefreshToken? storedToken = await _refreshTokenRepo.Get(refreshTokenRequest.Token);
             if (storedToken == null)
                 return Unauthorized("Invalid refresh token");
 
-            // 2. Check expiration
             if (storedToken.ExpiresAt < DateTime.UtcNow)
                 return Unauthorized("Refresh token expired");
 
-            // 3. Check if revoked
             if (storedToken.Revoked)
-                return Unauthorized("Refresh token revoked");
+                return Unauthorized("Refresh token already revoked");
 
-            // 4. Get associated user
             var user = await _userRepo.GetById(storedToken.UserId);
             if (user == null)
                 return Unauthorized("User no longer exists");
 
-            // 5. Rotate refresh token (Security requirement)
             string newRefreshToken = _tokenService.CreateRefreshToken();
 
-            // Save new refresh token
-            await _refreshTokenRepo.SaveToken(new RefreshToken
-            {
-                Token = newRefreshToken,
-                UserId = user.Id,
-                ExpiresAt = DateTime.UtcNow.AddDays(7),
-                Revoked = false
-            });
+            await _refreshTokenRepo.SaveToken(
+                new RefreshToken(newRefreshToken, user.Id, _refreshTokenExpirationDays)
+                );
+            storedToken.Revoke(newRefreshToken);
+            await _refreshTokenRepo.Update(storedToken);
 
-            // Revoke old
-            await _refreshTokenRepo.Revoke(refreshToken, newRefreshToken);
-
-            // 6. Generate new Access token
             string newAccessToken = _tokenService.CreateAccessToken(user);
 
-            // 7. Return new tokens to client
             return Ok(new
             {
                 accessToken = newAccessToken,
                 refreshToken = newRefreshToken
             });
         }
+
     }
 }
