@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace TaskManagerAPI.Models
+namespace TaskManagerAPI.Models.Auth
 {
-    public class LoginDTO
+    public class LoginRequest
     {
         [Required]
         [EmailAddress]

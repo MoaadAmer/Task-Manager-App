@@ -1,39 +1,16 @@
-﻿
-using Microsoft.AspNetCore.Identity;
-using TaskManagerAPI.Entites;
-using TaskManagerAPI.Models;
+﻿using TaskManagerAPI.Entities;
+using TaskManagerAPI.Models.User;
 
 namespace TaskManagerAPI.Repositories
 {
     public class InMemoryUserRepo : IUserRepo
     {
         private List<User> _users = [];
-
-        private readonly IPasswordHasher<User> _passwordHasher;
-        public InMemoryUserRepo(IPasswordHasher<User> passwordHasher)
+        public Task Insert(User user)
         {
-            _passwordHasher = passwordHasher;
-            var adminUser = new User()
-            {
-                Email = "Moaad@gmail.com",
-                FullName = "Moaad amer",
-                Id = new Guid()
-            };
-            adminUser.PasswordHash = _passwordHasher.HashPassword(adminUser, "123456");
-            _users.Add(adminUser);
-        }
+            _users.Add(user);
 
-        public Task<User> Create(CreateUserDTO user)
-        {
-            var newUser = new User()
-            {
-                Id = Guid.NewGuid(),
-                FullName = user.FullName,
-                Email = user.Email
-            };
-            newUser.PasswordHash = _passwordHasher.HashPassword(newUser, user.Password);
-            _users.Add(newUser);
-            return Task.FromResult(newUser);
+            return Task.CompletedTask;
         }
 
         public Task<List<User>> GetAll()
@@ -47,7 +24,7 @@ namespace TaskManagerAPI.Repositories
             return Task.FromResult(user);
         }
 
-        public async Task Update(Guid id, UpdateUserDTO updateUserDTO)
+        public async Task Update(Guid id, UpdateUserRequest updateUserDTO)
         {
             User? user = await GetById(id);
             if (user != null)
@@ -56,14 +33,15 @@ namespace TaskManagerAPI.Repositories
             }
         }
 
-        public async Task Delete(Guid id)
+        public Task Delete(Guid id)
         {
             int index = _users.FindIndex(user => user.Id == id);
             if (index >= 0)
             {
                 _users.RemoveAt(index);
             }
-            await Task.Delay(1);
+
+            return Task.CompletedTask;
         }
 
         public Task<User?> GetByEmail(string email)

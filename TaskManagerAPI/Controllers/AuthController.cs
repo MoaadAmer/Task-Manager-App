@@ -1,12 +1,8 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
-using TaskManagerAPI.Entites;
-using TaskManagerAPI.Models;
+﻿using Microsoft.AspNetCore.Mvc;
+using TaskManagerAPI.Entities;
+using TaskManagerAPI.Models.Auth;
 using TaskManagerAPI.Repositories;
+using TaskManagerAPI.Services.Interfaces;
 
 namespace TaskManagerAPI.Controllers
 {
@@ -15,49 +11,123 @@ namespace TaskManagerAPI.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IUserRepo _userRepo;
-        private readonly IPasswordHasher<User> _passwordHasher;
+        private readonly ITokenService _tokenService;
+        private readonly IRefreshTokenRepo _refreshTokenRepo;
+        IPasswordService _passwordService;
 
-        public AuthController(IUserRepo userRepo, IPasswordHasher<User> passwordHasher)
+        private readonly int _refreshTokenExpirationDays;
+
+        public AuthController(IUserRepo userRepo,
+            ITokenService tokenService,
+            IRefreshTokenRepo refreshTokenRepo,
+            IPasswordService passwordService,
+            IConfiguration configuration)
         {
             _userRepo = userRepo;
-            _passwordHasher = passwordHasher;
+            _tokenService = tokenService;
+            _refreshTokenRepo = refreshTokenRepo;
+            _passwordService = passwordService;
+            _refreshTokenExpirationDays = int.Parse(configuration["Jwt:RefreshTokenExpirationDays"]);
+        }
 
+        [HttpPost("register")]
+        public async Task<IActionResult> Register(RegisterRequest createUserDTO)
+        {
+            User? user = await _userRepo.GetByEmail(createUserDTO.Email);
+            if (user != null)
+            {
+                return BadRequest("Email is already registered");
+            }
+            user = new User { Id = Guid.NewGuid(), Email = createUserDTO.Email, FullName = createUserDTO.FullName };
+            user.PasswordHash = _passwordService.HashPassword(user, createUserDTO.Password);
+
+            await _userRepo.Insert(user);
+
+            string accessToken = _tokenService.CreateAccessToken(user);
+            string refreshToken = _tokenService.CreateRefreshToken();
+            await _refreshTokenRepo.SaveToken(
+                new RefreshToken(refreshToken, user.Id, _refreshTokenExpirationDays)
+                );
+
+            return Ok(new
+            {
+                accessToken,
+                refreshToken
+            });
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login(LoginDTO loginDTO)
+        public async Task<IActionResult> Login(LoginRequest loginRequest)
         {
-            User? user = await _userRepo.GetByEmail(loginDTO.Email);
-            if (user != null && _passwordHasher.VerifyHashedPassword(user, user.PasswordHash, loginDTO.Password) == PasswordVerificationResult.Success)
+            User? user = await _userRepo.GetByEmail(loginRequest.Email);
+            if (user != null && _passwordService.VerifyPassword(user, loginRequest.Password))
             {
-                var token = GenerateJwtToken(user.Email);
-                return Ok(new { Token = token });
+                string accessToken = _tokenService.CreateAccessToken(user);
+                string refreshToken = _tokenService.CreateRefreshToken();
+
+                await
+                    _refreshTokenRepo.
+                    SaveToken(
+                    new RefreshToken(refreshToken, user.Id, _refreshTokenExpirationDays)
+                    );
+
+                return Ok(new { accessToken, refreshToken });
             }
             return Unauthorized();
+        }
+
+        [HttpPost("logout")]
+        public async Task<IActionResult> Logout(RefreshTokenRequest refreshTokenRequest)
+        {
+            string refreshToken = refreshTokenRequest.Token;
+            RefreshToken? storedToken = await _refreshTokenRepo.Get(refreshToken);
+            if (storedToken == null)
+            {
+                return Unauthorized("Invalid refresh token");
+            }
+            if (storedToken.Revoked)
+            {
+                return Unauthorized("Refresh token revoked");
+            }
+            storedToken.Revoke();
+            await _refreshTokenRepo.Update(storedToken);
+
+            return Ok(new { message = "Logged out successfully." });
 
         }
 
-
-        private string GenerateJwtToken(string email)
+        [HttpPost("refresh")]
+        public async Task<IActionResult> RefreshToken(RefreshTokenRequest refreshTokenRequest)
         {
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("yourSecretKey12345moaadamer123456789"));
-            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+            RefreshToken? storedToken = await _refreshTokenRepo.Get(refreshTokenRequest.Token);
+            if (storedToken == null)
+                return Unauthorized("Invalid refresh token");
 
-            var claims = new[]
+            if (storedToken.ExpiresAt < DateTime.UtcNow)
+                return Unauthorized("Refresh token expired");
+
+            if (storedToken.Revoked)
+                return Unauthorized("Refresh token already revoked");
+
+            var user = await _userRepo.GetById(storedToken.UserId);
+            if (user == null)
+                return Unauthorized("User no longer exists");
+
+            string newRefreshToken = _tokenService.CreateRefreshToken();
+
+            await _refreshTokenRepo.SaveToken(
+                new RefreshToken(newRefreshToken, user.Id, _refreshTokenExpirationDays)
+                );
+            storedToken.Revoke(newRefreshToken);
+            await _refreshTokenRepo.Update(storedToken);
+
+            string newAccessToken = _tokenService.CreateAccessToken(user);
+
+            return Ok(new
             {
-            new Claim(ClaimTypes.Email, email),
-            new Claim(ClaimTypes.Role, "user")
-    };
-
-            var token = new JwtSecurityToken(
-                issuer: "yourIssuer",
-                audience: "yourAudience",
-                claims: claims,
-                expires: DateTime.Now.AddHours(1),
-                signingCredentials: credentials
-            );
-
-            return new JwtSecurityTokenHandler().WriteToken(token);
+                accessToken = newAccessToken,
+                refreshToken = newRefreshToken
+            });
         }
 
     }

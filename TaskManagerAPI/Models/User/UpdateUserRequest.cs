@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace TaskManagerAPI.Models
+namespace TaskManagerAPI.Models.User
 {
-    public class UpdateUserDTO
+    public class UpdateUserRequest
     {
         [Required]
         [MaxLength(50)]

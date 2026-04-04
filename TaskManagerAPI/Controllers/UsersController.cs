@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using TaskManagerAPI.Entites;
-using TaskManagerAPI.Models;
+using TaskManagerAPI.Entities;
+using TaskManagerAPI.Models.User;
 using TaskManagerAPI.Repositories;
+using TaskManagerAPI.Services.Interfaces;
 
 namespace TaskManagerAPI.Controllers
 {
@@ -10,21 +11,26 @@ namespace TaskManagerAPI.Controllers
     public class UsersController : ControllerBase
     {
         private readonly IUserRepo _userRepo;
+        private readonly IPasswordService _passwordService;
 
-        public UsersController(IUserRepo userRepo)
+        public UsersController(IUserRepo userRepo, IPasswordService passwordService)
         {
             _userRepo = userRepo;
+            this._passwordService = passwordService;
         }
 
         [HttpPost]
-        public async Task<ActionResult<GetUserDTO>> Create(CreateUserDTO user)
+        public async Task<ActionResult<GetUserResponse>> Create(CreateUserRequest createUserRequest)
         {
-            User newUser = await _userRepo.Create(user);
-            return CreatedAtAction(nameof(GetById), new { Id = newUser.Id }, UserToGetUserDTO(newUser));
+            User user = new User { Id = Guid.NewGuid(), Email = createUserRequest.Email, FullName = createUserRequest.FullName };
+            user.PasswordHash = _passwordService.HashPassword(user, createUserRequest.Password);
+
+            await _userRepo.Insert(user);
+            return CreatedAtAction(nameof(GetById), new { user.Id }, UserToGetUserDTO(user));
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<GetUserDTO>> GetById(Guid id)
+        public async Task<ActionResult<GetUserResponse>> GetById(Guid id)
         {
             User? user = await _userRepo.GetById(id);
             if (user == null)
@@ -35,18 +41,18 @@ namespace TaskManagerAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<GetUserDTO>>> GetAll()
+        public async Task<ActionResult<IEnumerable<GetUserResponse>>> GetAll()
         {
-            IEnumerable<GetUserDTO> users = (await _userRepo.GetAll()).Select(UserToGetUserDTO);
+            IEnumerable<GetUserResponse> users = (await _userRepo.GetAll()).Select(UserToGetUserDTO);
             return Ok(users);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(Guid id, UpdateUserDTO updateUserDTO)
+        public async Task<IActionResult> Update(Guid id, UpdateUserRequest updateUserRequest)
         {
             if (await _userRepo.GetById(id) != null)
             {
-                await _userRepo.Update(id, updateUserDTO);
+                await _userRepo.Update(id, updateUserRequest);
 
                 return NoContent();
             }
@@ -66,9 +72,9 @@ namespace TaskManagerAPI.Controllers
             return NotFound();
         }
 
-        private GetUserDTO UserToGetUserDTO(User newUser)
+        private GetUserResponse UserToGetUserDTO(User newUser)
         {
-            return new GetUserDTO()
+            return new GetUserResponse()
             {
                 Id = newUser.Id,
                 Email = newUser.Email,

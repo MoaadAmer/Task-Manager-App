@@ -2,25 +2,32 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using TaskManagerAPI.Entites;
+using TaskManagerAPI.Entities;
 using TaskManagerAPI.Repositories;
+using TaskManagerAPI.Services;
+using TaskManagerAPI.Services.Interfaces;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
-builder.Services.AddSingleton<IPasswordHasher<User>, PasswordHasher<User>>();
-
-
+builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
+builder.Services.AddScoped<IPasswordService, PasswordService>();
 builder.Services.AddSingleton<IUserRepo, InMemoryUserRepo>();
+builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddSingleton<IRefreshTokenRepo, InMemoryRefreshTokenRepo>();
+
+
+builder.Services.AddOpenApi();
 
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 .AddJwtBearer(jwtOptions =>
 {
+    var config = builder.Configuration.GetSection("Jwt");
+
 
     jwtOptions.TokenValidationParameters = new TokenValidationParameters
     {
@@ -28,11 +35,10 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         ValidateAudience = true,
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
-        ValidIssuer = "yourIssuer",
-        ValidAudience = "yourAudience",
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("yourSecretKey12345"))
+        ValidIssuer = config["Issuer"],
+        ValidAudience = config["Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["Key"]))
     };
-
 });
 
 builder.Services.AddAuthorization();
@@ -43,6 +49,10 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint("/openapi/v1.json", "v1");
+    });
 }
 
 app.UseHttpsRedirection();

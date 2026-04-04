@@ -1,6 +1,6 @@
-﻿namespace TaskManagerAPI.Models
+﻿namespace TaskManagerAPI.Models.User
 {
-    public class GetUserDTO
+    public class GetUserResponse
     {
         public Guid Id { get; set; }
         public string FullName { get; set; }
