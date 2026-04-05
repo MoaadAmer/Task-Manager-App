@@ -1,5 +1,4 @@
 ﻿using TaskManagerAPI.Entities;
-using TaskManagerAPI.Models.User;
 
 namespace TaskManagerAPI.Repositories
 {
@@ -20,17 +19,13 @@ namespace TaskManagerAPI.Repositories
 
         public Task<User?> GetById(Guid id)
         {
-            User? user = _users.Find(user => user.Id == id);
-            return Task.FromResult(user);
+            return Task.FromResult(_users.FirstOrDefault(user => user.Id == id));
+
         }
 
-        public async Task Update(Guid id, UpdateUserRequest updateUserDTO)
+        public Task Update(User user)
         {
-            User? user = await GetById(id);
-            if (user != null)
-            {
-                user.FullName = updateUserDTO.FullName;
-            }
+            return Task.CompletedTask;
         }
 
         public Task Delete(Guid id)
@@ -46,7 +41,7 @@ namespace TaskManagerAPI.Repositories
 
         public Task<User?> GetByEmail(string email)
         {
-            return Task.FromResult(_users.Find(user => user.Email == email));
+            return Task.FromResult(_users.FirstOrDefault(user => user.Email == email));
         }
     }
 }

@@ -22,11 +22,23 @@ namespace TaskManagerAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<GetUserResponse>> Create(CreateUserRequest createUserRequest)
         {
-            User user = new User { Id = Guid.NewGuid(), Email = createUserRequest.Email, FullName = createUserRequest.FullName };
+            User? existingUser = await _userRepo.GetByEmail(createUserRequest.Email);
+            if (existingUser != null)
+            {
+                return BadRequest("Email already exists.");
+            }
+
+            User user = new User
+            {
+                Id = Guid.NewGuid(),
+                Email = createUserRequest.Email,
+                FullName = createUserRequest.FullName,
+                Role = createUserRequest.Role,
+            };
             user.PasswordHash = _passwordService.HashPassword(user, createUserRequest.Password);
 
             await _userRepo.Insert(user);
-            return CreatedAtAction(nameof(GetById), new { user.Id }, UserToGetUserDTO(user));
+            return CreatedAtAction(nameof(GetById), new { id = user.Id }, UserToGetUserDTO(user));
         }
 
         [HttpGet("{id}")]
@@ -50,26 +62,34 @@ namespace TaskManagerAPI.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(Guid id, UpdateUserRequest updateUserRequest)
         {
-            if (await _userRepo.GetById(id) != null)
+            User? user = await _userRepo.GetById(id);
+            if (user == null)
             {
-                await _userRepo.Update(id, updateUserRequest);
-
-                return NoContent();
+                return NotFound();
             }
-            return NotFound();
+            if (!string.IsNullOrWhiteSpace(updateUserRequest.FullName))
+            {
+                user.FullName = updateUserRequest.FullName;
+            }
+            if (!string.IsNullOrWhiteSpace(updateUserRequest.Role))
+            {
+                user.Role = updateUserRequest.Role;
+            }
+            await _userRepo.Update(user);
+
+            return NoContent();
         }
 
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {
-            if (await _userRepo.GetById(id) != null)
+            if (await _userRepo.GetById(id) == null)
             {
-                await _userRepo.Delete(id);
-
-                return NoContent();
+                return NotFound();
             }
-            return NotFound();
+            await _userRepo.Delete(id);
+            return NoContent();
         }
 
         private GetUserResponse UserToGetUserDTO(User newUser)
@@ -78,7 +98,8 @@ namespace TaskManagerAPI.Controllers
             {
                 Id = newUser.Id,
                 Email = newUser.Email,
-                FullName = newUser.FullName
+                FullName = newUser.FullName,
+                Role = newUser.Role,
             };
         }
 
