@@ -3,15 +3,13 @@ namespace TaskManagerAPI.Repositories;
 
 using System.Collections.Generic;
 using TaskManagerAPI.Entities;
-using TaskManagerAPI.Models.User;
 
 public interface IUserRepo
 {
     Task Insert(User user);
     Task<User?> GetById(Guid id);
     Task<User?> GetByEmail(string email);
-
     Task<List<User>> GetAll();
-    Task Update(Guid id, UpdateUserRequest updateUserDTO);
+    Task Update(User user);
     Task Delete(Guid id);
 }
