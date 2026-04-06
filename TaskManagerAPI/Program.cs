@@ -4,6 +4,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using TaskManagerAPI.Entities;
 using TaskManagerAPI.Repositories;
+using TaskManagerAPI.Repositories.Interfaces;
 using TaskManagerAPI.Services;
 using TaskManagerAPI.Services.Interfaces;
 
@@ -16,6 +17,7 @@ builder.Services.AddControllers();
 builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 builder.Services.AddScoped<IPasswordService, PasswordService>();
 builder.Services.AddSingleton<IUserRepo, InMemoryUserRepo>();
+builder.Services.AddSingleton<ITaskRepo, InMemoryTaskRepo>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddSingleton<IRefreshTokenRepo, InMemoryRefreshTokenRepo>();
 

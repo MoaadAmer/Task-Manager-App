@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TaskManagerAPI.Entities;
 using TaskManagerAPI.Models.User;
-using TaskManagerAPI.Repositories;
+using TaskManagerAPI.Repositories.Interfaces;
 using TaskManagerAPI.Services.Interfaces;
 
 namespace TaskManagerAPI.Controllers
