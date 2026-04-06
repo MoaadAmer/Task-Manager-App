@@ -1,4 +1,5 @@
 ﻿using TaskManagerAPI.Entities;
+using TaskManagerAPI.Repositories.Interfaces;
 
 namespace TaskManagerAPI.Repositories
 {

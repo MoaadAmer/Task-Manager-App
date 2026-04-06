@@ -1,5 +1,4 @@
-﻿
-namespace TaskManagerAPI.Repositories;
+﻿namespace TaskManagerAPI.Repositories.Interfaces;
 
 using System.Collections.Generic;
 using TaskManagerAPI.Entities;
