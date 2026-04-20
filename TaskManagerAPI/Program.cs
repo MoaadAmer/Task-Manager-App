@@ -9,9 +9,6 @@ using TaskManagerAPI.Repositories.Interfaces;
 using TaskManagerAPI.Services;
 using TaskManagerAPI.Services.Interfaces;
 
-
-
-
 public partial class Program
 {
     private static void Main(string[] args)
@@ -85,5 +82,13 @@ public partial class Program
         app.MapControllers();
 
         app.Run();
+
+        new User()
+        {
+            Id = Guid.NewGuid(),
+            FullName = "Moaad",
+            Email = "Moaad@gmail.com",
+            Role = UserRole.Admin
+        }
     }
 }
