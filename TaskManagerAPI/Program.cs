@@ -1,6 +1,7 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi;
 using System.Text;
 using TaskManagerAPI.Entities;
 using TaskManagerAPI.Repositories;
@@ -8,60 +9,96 @@ using TaskManagerAPI.Repositories.Interfaces;
 using TaskManagerAPI.Services;
 using TaskManagerAPI.Services.Interfaces;
 
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-
-builder.Services.AddControllers();
-builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
-builder.Services.AddScoped<IPasswordService, PasswordService>();
-builder.Services.AddSingleton<IUserRepo, InMemoryUserRepo>();
-builder.Services.AddSingleton<ITaskRepo, InMemoryTaskRepo>();
-builder.Services.AddScoped<ITokenService, TokenService>();
-builder.Services.AddSingleton<IRefreshTokenRepo, InMemoryRefreshTokenRepo>();
-
-
-builder.Services.AddOpenApi();
-
-
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-.AddJwtBearer(jwtOptions =>
+public partial class Program
 {
-    var config = builder.Configuration.GetSection("Jwt");
-
-
-    jwtOptions.TokenValidationParameters = new TokenValidationParameters
+    private static void Main(string[] args)
     {
-        ValidateIssuer = true,
-        ValidateAudience = true,
-        ValidateLifetime = true,
-        ValidateIssuerSigningKey = true,
-        ValidIssuer = config["Issuer"],
-        ValidAudience = config["Audience"],
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["Key"]))
-    };
-});
+        var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddAuthorization();
 
-var app = builder.Build();
+        builder.Services.AddControllers();
+        builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
+        builder.Services.AddScoped<IPasswordService, PasswordService>();
+        builder.Services.AddSingleton<IUserRepo, InMemoryUserRepo>();
+        builder.Services.AddSingleton<ITaskRepo, InMemoryTaskRepo>();
+        builder.Services.AddScoped<ITokenService, TokenService>();
+        builder.Services.AddSingleton<IRefreshTokenRepo, InMemoryRefreshTokenRepo>();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();
-    app.UseSwaggerUI(options =>
-    {
-        options.SwaggerEndpoint("/openapi/v1.json", "v1");
-    });
+
+
+        builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+        .AddJwtBearer(jwtOptions =>
+        {
+            var config = builder.Configuration.GetSection("Jwt");
+
+
+            jwtOptions.TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuer = true,
+                ValidateAudience = true,
+                ValidateLifetime = true,
+                ValidateIssuerSigningKey = true,
+                ValidIssuer = config["Issuer"],
+                ValidAudience = config["Audience"],
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["Key"]))
+            };
+        });
+
+        builder.Services.AddAuthorization();
+
+        builder.Services.AddSwaggerGen(options =>
+        {
+            options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+            {
+                Type = SecuritySchemeType.Http,
+                Scheme = "bearer",
+                BearerFormat = "JWT",
+                Description = "JWT Authorization header using the Bearer scheme"
+            });
+
+            options.AddSecurityRequirement(document =>
+                new OpenApiSecurityRequirement
+                {
+                    [
+                        new OpenApiSecuritySchemeReference("Bearer", document)
+                    ] = new List<string>()
+                }
+            );
+        });
+
+
+        var app = builder.Build();
+
+        if (app.Environment.IsDevelopment())
+        {
+            app.UseSwagger();
+            app.UseSwaggerUI();
+        }
+        app.UseHttpsRedirection();
+
+        app.UseAuthentication();
+        app.UseAuthorization();
+
+        app.MapControllers();
+
+        using (var scope = app.Services.CreateScope())
+        {
+            var userRepo = scope.ServiceProvider.GetRequiredService<IUserRepo>();
+            var passwordService = scope.ServiceProvider.GetRequiredService<IPasswordService>();
+
+
+            var adminUser = new User()
+            {
+                Id = Guid.NewGuid(),
+                FullName = "Moaad",
+                Email = "Moaad@gmail.com",
+                Role = UserRole.Admin
+            };
+            adminUser.PasswordHash = passwordService.HashPassword(adminUser, "123");
+
+            userRepo.Insert(adminUser);
+        }
+        app.Run();
+
+    }
 }
-
-app.UseHttpsRedirection();
-
-app.UseAuthentication();
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.Run();

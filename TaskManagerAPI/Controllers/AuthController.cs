@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using TaskManagerAPI.Entities;
 using TaskManagerAPI.Models.Auth;
 using TaskManagerAPI.Repositories.Interfaces;
@@ -8,7 +9,7 @@ namespace TaskManagerAPI.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class AuthController : ControllerBase
+    public class AuthController : Base
     {
         private readonly IUserRepo _userRepo;
         private readonly ITokenService _tokenService;
@@ -77,13 +78,24 @@ namespace TaskManagerAPI.Controllers
         }
 
         [HttpPost("logout")]
+        [Authorize]
         public async Task<IActionResult> Logout(RefreshTokenRequest refreshTokenRequest)
         {
+            Guid? userId = GetUserId();
+            if (userId == null)
+            {
+                return Unauthorized();
+            }
             string refreshToken = refreshTokenRequest.Token;
             RefreshToken? storedToken = await _refreshTokenRepo.Get(refreshToken);
+
             if (storedToken == null)
             {
                 return Unauthorized("Invalid refresh token");
+            }
+            if (storedToken.UserId! == userId)
+            {
+                return Forbid();
             }
             if (storedToken.Revoked)
             {
@@ -95,7 +107,6 @@ namespace TaskManagerAPI.Controllers
             return Ok(new { message = "Logged out successfully." });
 
         }
-
         [HttpPost("refresh")]
         public async Task<IActionResult> RefreshToken(RefreshTokenRequest refreshTokenRequest)
         {
@@ -129,6 +140,5 @@ namespace TaskManagerAPI.Controllers
                 refreshToken = newRefreshToken
             });
         }
-
     }
 }

@@ -1,11 +1,6 @@
 ﻿namespace TaskManagerAPI.Entities
 {
-    public enum TaskStatus
-    {
-        Pending,
-        InProgress,
-        Completed
-    }
+
     public class TaskItem
     {
         public string Title { get; set; }
@@ -17,14 +12,15 @@
         public Guid UserId { get; set; }
 
 
-        public TaskItem(string title,string description,DateTime dueDate)
+        public TaskItem(Guid userId, string title, string description, DateTime dueDate)
         {
-            Id= Guid.NewGuid();
-            Title=title;
-            Description=description;
-            DueDate=dueDate;
+            UserId = userId;
+            Id = Guid.NewGuid();
+            Title = title;
+            Description = description;
+            DueDate = dueDate;
             Status = TaskStatus.Pending;
         }
     }
-    
+
 }
