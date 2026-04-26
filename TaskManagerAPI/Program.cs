@@ -81,14 +81,24 @@ public partial class Program
 
         app.MapControllers();
 
+        using (var scope = app.Services.CreateScope())
+        {
+            var userRepo = scope.ServiceProvider.GetRequiredService<IUserRepo>();
+            var passwordService = scope.ServiceProvider.GetRequiredService<IPasswordService>();
+
+
+            var adminUser = new User()
+            {
+                Id = Guid.NewGuid(),
+                FullName = "Moaad",
+                Email = "Moaad@gmail.com",
+                Role = UserRole.Admin
+            };
+            adminUser.PasswordHash = passwordService.HashPassword(adminUser, "123");
+
+            userRepo.Insert(adminUser);
+        }
         app.Run();
 
-        new User()
-        {
-            Id = Guid.NewGuid(),
-            FullName = "Moaad",
-            Email = "Moaad@gmail.com",
-            Role = UserRole.Admin
-        }
     }
 }
