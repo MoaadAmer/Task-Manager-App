@@ -4,6 +4,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
 using System.Text;
 using TaskManagerAPI.Entities;
+using TaskManagerAPI.Middleware;
 using TaskManagerAPI.Repositories;
 using TaskManagerAPI.Repositories.Interfaces;
 using TaskManagerAPI.Services;
@@ -71,8 +72,14 @@ public partial class Program
 
         if (app.Environment.IsDevelopment())
         {
+            app.UseDeveloperExceptionPage();
             app.UseSwagger();
             app.UseSwaggerUI();
+
+        }
+        else
+        {
+            app.UseMiddleware<GlobalExceptionHandlingMiddleware>();
         }
         app.UseHttpsRedirection();
 
